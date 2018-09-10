@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>The Library</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
+    <link rel="stylesheet" th:href="@{/css/resetter.css}">
+
+</head>
+<body>
+    <div  th:fragment="navbar">
+        <nav class="navbar-expand-xl navbar-light navbar fixed-top">
+            <img class="navbar-brand logo" src="/images/Logo.png" alt="test picture">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
+                    aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse " id="navbarsExample06" style="">
+                <ul class="navbar-nav mx-auto central-nav-text">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"> Home </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"> Recommendation </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"> Create </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link " href="/"> Browse </a>
+                    </li>
+                    <li class="nav-item ">
+                        <form class="form-inline my-2 my-md-0">
+                            <input class="form-control search-bar center-nav-input-form" type="text"
+                                   placeholder="Search Books, Stories, Authors or Genres">
+                        </form>
+                    </li>
+                </ul>
+                <div class="my-2 my-md-0 navigation-icons central-nav-text">
+                    <a class="icon-link" href="/">
+                        <img class="icons" src="/images/notification-icon.png" alt="notification-icon">
+                    </a>
+                    <a class="icon-link" href="/">
+                        <img class="icons" src="/images/message-icon.png" alt="message-icon">
+                    </a>
+                    <a class="icon-link" href="/">
+                        <img class="icons" src="/images/profile-icon.png" alt="profile-icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.1.0/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
