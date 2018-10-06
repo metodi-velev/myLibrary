@@ -15,7 +15,7 @@ public class Author {
     private Nationality nationality;
 
     @Transient
-    private List<Genre> genres;
+    private Genre genres;
 
     @OneToMany(mappedBy = "author")
     private Collection<Book> books;
@@ -27,18 +27,17 @@ public class Author {
     public Author() {
     }
 
-    public Author(String firstName, String lastName, String alias, Instant year, Nationality nationality, List<Genre> genres, long id) {
+    public Author(String firstName, String lastName, String alias, Instant year, Nationality nationality, Genre genres) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.alias = alias;
         this.year = year;
         this.nationality = nationality;
         this.genres = genres;
-        this.id = id;
     }
 
-    public Author(String firstName, String lastName, String alias, Instant year, Nationality nationality, List<Genre> genres, Collection<Book> books, long id) {
-        this(firstName, lastName, alias, year, nationality ,genres, id);
+    public Author(String firstName, String lastName, String alias, Instant year, Nationality nationality, Genre genres, Collection<Book> books) {
+        this(firstName, lastName, alias, year, nationality ,genres);
         this.books = books;
     }
 
@@ -78,7 +77,7 @@ public class Author {
         this.nationality = nationality;
     }
 
-    public void setGenres(List<Genre> genres) {
+    public void setGenres(Genre genres) {
         this.genres = genres;
     }
 
@@ -102,7 +101,7 @@ public class Author {
         return alias;
     }
 
-    public List<Genre> getGenres() {
+    public Genre getGenres() {
         return genres;
     }
 

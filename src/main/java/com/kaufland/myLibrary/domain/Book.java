@@ -14,8 +14,8 @@ public abstract class Book extends Read implements Comparable {
 
     private int pages;
 
-    public Book(String title, long id, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages) {
-        super(title, id, year, language, genre, image, rating);
+    public Book(String title, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages) {
+        super(title, year, language, genre, image, rating);
         this.author = author;
         this.pages = pages;
     }

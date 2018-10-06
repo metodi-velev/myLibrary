@@ -26,9 +26,8 @@ public abstract class Read implements Printable {
     private float rating;
 
 
-    public Read(String title, long id, Instant year, Language language, Genre genre, String image, float rating) {
+    public Read(String title, Instant year, Language language, Genre genre, String image, float rating) {
         this.title = title;
-        this.id = id;
         this.year = year;
         this.language = language;
         this.genre = genre;

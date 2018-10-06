@@ -13,15 +13,15 @@ public class ChildBook extends Book implements Colorable {
     private String[] puzzles;
     private boolean isColorable;
 
-    public ChildBook(String title, long id, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages, String[] pictures, int recommendAge, String[] puzzles) {
-        super(title, id, year, language, genre, image, rating, author, pages);
+    public ChildBook(String title, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages, String[] pictures, int recommendAge, String[] puzzles) {
+        super(title, year, language, genre, image, rating, author, pages);
         this.pictures = pictures;
         this.recommendAge = recommendAge;
         this.puzzles = puzzles;
     }
 
-    public ChildBook(String title, long id, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages, String[] pictures, int recommendAge, String[] puzzles, boolean isColorable) {
-        this(title, id, year, language, genre, image, rating , author, pages, pictures, recommendAge,puzzles);
+    public ChildBook(String title, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages, String[] pictures, int recommendAge, String[] puzzles, boolean isColorable) {
+        this(title, year, language, genre, image, rating , author, pages, pictures, recommendAge,puzzles);
         this.isColorable = isColorable;
     }
 

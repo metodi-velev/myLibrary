@@ -1,4 +1,4 @@
-package com.kaufland.myLibrary.config;
+loapackage com.kaufland.myLibrary.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

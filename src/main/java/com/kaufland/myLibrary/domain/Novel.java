@@ -16,11 +16,12 @@ public class Novel extends Book implements BlackAndWhite {
     private String summary;
     private boolean series;
 
-    public Novel(String title, long id, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages, boolean isBlackAndWhite, String summary, boolean series) {
-        super(title, id, year, language, genre, image, rating, author, pages);
+    public Novel(String title, Instant year, Language language, Genre genre, String image, float rating, Author author, int pages, boolean isBlackAndWhite,boolean series, String summary) {
+        super(title, year, language, genre, image, rating, author, pages);
         this.isBlackAndWhite = isBlackAndWhite;
-        this.summary = summary;
         this.series = series;
+        this.summary = summary;
+
     }
 
     public Novel() {

@@ -29,267 +29,151 @@ public class DatabaseInitializer implements ApplicationRunner {
     @Transactional
     public void run(ApplicationArguments args) throws Exception {
 
-        Author author1 = new Author();
-        author1.setFirstName("Stephen");
-        author1.setLastName("King");
-        author1.setAlias("Richard Bachman");
-        author1.setNationality(Nationality.AMERICAN);
-        author1.setYear(DateUtility.toInstant("1947-09-21"));
-        this.authorRepository.save(author1);
+        Author stephenKing = new Author("Stephen", "King", "Richard Bachman", DateUtility.toInstant("1947-09-21"), Nationality.AMERICAN, Genre.HORROR);
+        this.authorRepository.save(stephenKing);
 
-        Author author2 = new Author();
-        author2.setFirstName("Roxane");
-        author2.setLastName("Gay");
-        author2.setAlias("-");
-        author2.setNationality(Nationality.AMERICAN);
-        author2.setYear(DateUtility.toInstant("1974-10-28"));
-        this.authorRepository.save(author2);
+        Author roxaneGay = new Author("Roxane", "Gay", "", DateUtility.toInstant("1974-10-28"), Nationality.AMERICAN, Genre.MEMORY);
+        this.authorRepository.save(roxaneGay);
 
-        Author author3 = new Author();
-        author3.setFirstName("Alan");
-        author3.setLastName("Milne");
-        author3.setAlias("A. A. Milne");
-        author3.setNationality(Nationality.ENGLISHMAN);
-        author3.setYear(DateUtility.toInstant("1882-01-18"));
-        this.authorRepository.save(author3);
+        Author alanMilne = new Author("Alan","Milne","A. A. Milne",DateUtility.toInstant("1882-01-18"),Nationality.ENGLISHMAN, Genre.CHILDBOOKS);
+        this.authorRepository.save(alanMilne);
 
-        Author author4 = new Author();
-        author4.setFirstName("Helene");
-        author4.setLastName("Dunbar");
-        author4.setAlias("");
-        author4.setNationality(Nationality.AMERICAN);
-        author4.setYear(DateUtility.toInstant("1972-10-23"));
-        this.authorRepository.save(author4);
+        Author heleneDunbar = new Author("Helene", "Dunbar", "", DateUtility.toInstant("1972-10-23"), Nationality.AMERICAN, Genre.YOUNG_ADULT);
+        this.authorRepository.save(heleneDunbar);
 
-        Author author5 = new Author();
-        author5.setFirstName("John");
-        author5.setLastName("Green");
-        author5.setAlias("");
-        author5.setNationality(Nationality.AMERICAN);
-        author5.setYear(DateUtility.toInstant("1977-08-24"));
-        this.authorRepository.save(author5);
+        Author johnGreen = new Author("John", "Green", "", DateUtility.toInstant("1977-08-24"), Nationality.AMERICAN, Genre.YOUNG_ADULT);
+        this.authorRepository.save(johnGreen);
 
-        Author author6 = new Author();
-        author6.setFirstName("Jennifer");
-        author6.setLastName("Armentrout");
-        author6.setAlias("J. Lynn");
-        author6.setNationality(Nationality.AMERICAN);
-        author6.setYear(DateUtility.toInstant("1980-06-11"));
-        this.authorRepository.save(author6);
+        Author jennferArmentrout = new Author("Jennifer", "Armentrout", "J. Lynn", DateUtility.toInstant("1980-06-11"), Nationality.AMERICAN, Genre.FANTASY);
+        this.authorRepository.save(jennferArmentrout);
 
-        Author author7 = new Author();
-        author7.setFirstName("Suzanne");
-        author7.setLastName("Collins");
-        author7.setAlias("");
-        author7.setNationality(Nationality.AMERICAN);
-        author7.setYear(DateUtility.toInstant("1962-08-10"));
-        this.authorRepository.save(author7);
+        Author suzanneCollins = new Author("Suzanne", "Collins", "", DateUtility.toInstant("1962-08-10"), Nationality.AMERICAN, Genre.SCIENCE_FICTION );
+        this.authorRepository.save(suzanneCollins);
 
-        Author author8 = new Author();
-        author8.setFirstName("Veronica");
-        author8.setLastName("Roth");
-        author8.setAlias("");
-        author8.setNationality(Nationality.AMERICAN);
-        author8.setYear(DateUtility.toInstant("1988-08-19"));
-        this.authorRepository.save(author8);
+        Author veronicaRoth = new Author("Veronica", "Roth", "", DateUtility.toInstant("1988-08-19"), Nationality.AMERICAN, Genre.FICTION );
+        this.authorRepository.save(veronicaRoth);
 
-        Author author9 = new Author();
-        author9.setFirstName("George");
-        author9.setLastName("Martin");
-        author9.setAlias("GRRM");
-        author9.setNationality(Nationality.AMERICAN);
-        author9.setYear(DateUtility.toInstant("1948-09-20"));
-        this.authorRepository.save(author9);
+        Author georgeMartin = new Author("George", "Martin", "GRRM", DateUtility.toInstant("1948-09-20"), Nationality.AMERICAN, Genre.FANTASY );
+        this.authorRepository.save(georgeMartin);
 
-        Author author10 = new Author();
-        author10.setFirstName("James");
-        author10.setLastName("Dashner");
-        author10.setAlias("");
-        author10.setNationality(Nationality.AMERICAN);
-        author10.setYear(DateUtility.toInstant("1972-11-26"));
-        this.authorRepository.save(author10);
+        Author jamesDasher = new Author("James", "Dashner", "", DateUtility.toInstant("1972-11-26"), Nationality.AMERICAN, Genre.FANTASY);
+        this.authorRepository.save(jamesDasher);
 
-        Author author11 = new Author();
-        author11.setFirstName("Nicholas");
-        author11.setLastName("Sparks");
-        author11.setAlias("");
-        author11.setNationality(Nationality.AMERICAN);
-        author11.setYear(DateUtility.toInstant("1965-12-31"));
-        this.authorRepository.save(author11);
+        Author nicholasSparks = new Author("Nicholas","Sparks", "", DateUtility.toInstant(" 1965-12-31"), Nationality.AMERICAN, Genre.ROMANCE);
+        this.authorRepository.save(nicholasSparks);
 
-        Author author12 = new Author();
-        author12.setFirstName("Stephenie");
-        author12.setLastName("Meyer");
-        author12.setAlias("");
-        author12.setNationality(Nationality.AMERICAN);
-        author12.setYear(DateUtility.toInstant("1973-12-24"));
-        this.authorRepository.save(author12);
+        Author stephenieMeyer = new Author("Stephenie", "Meyer", "", DateUtility.toInstant("1973-12-24"), Nationality.AMERICAN, Genre.FANTASY  );
+        this.authorRepository.save(stephenieMeyer);
 
-        Author author13 = new Author();
-        author13.setFirstName("Simone");
-        author13.setLastName("Elkeles");
-        author13.setAlias("");
-        author13.setNationality(Nationality.AMERICAN);
-        author13.setYear(DateUtility.toInstant("1970-04-24"));
-        this.authorRepository.save(author13);
+        Author simoneElkeles = new Author("Simone", "Elkeles", "", DateUtility.toInstant("1970-04-24"), Nationality.AMERICAN, Genre.ROMANCE);
+        this.authorRepository.save(simoneElkeles);
 
 
 
 
+        Novel it = new Novel("It",DateUtility.toInstant("1986-09-15"), Language.ENGLISH, Genre.HORROR, "https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2017/04/It-Audiobook.jpg?w=402&h=565&ssl=1",
+                                4.5f, stephenKing, 1138, true, false, "Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers." );
+        this.bookRepository.save(it);
 
-
-        Novel book1 = new Novel();
-        book1.setTitle("It");
-        book1.setAuthor(author1);
-        book1.setPages(1138);
-        book1.setLanguage(Language.ENGLISH);
-        book1.setGenre(Genre.HORROR);
-        book1.setYear(DateUtility.toInstant("1986-09-15"));
-        book1.setRating(4.5f);
-        book1.setImage("https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2017/04/It-Audiobook.jpg?w=402&h=565&ssl=1");
-        book1.setSeries(false);
-        book1.setSummary("Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers.");
-        book1.setBlackAndWhite(true);
-        this.bookRepository.save(book1);
-
-        Novel book2 = new Novel();
-        book2.setTitle("Doctor Sleep");
-        book2.setAuthor(author1);
-        book2.setPages(531);
-        book2.setLanguage(Language.ENGLISH);
-        book2.setGenre(Genre.HORROR);
-        book2.setYear(DateUtility.toInstant("2013-09-24"));
-        book2.setRating(4.1f);
-        book2.setImage("https://images.gr-assets.com/books/1457473537l/18741301.jpg");
-        book2.setSeries(true);
-        book2.setSummary("Stephen King returns to the characters and territory of one of his most popular novels ever, The Shining, in this instantly riveting novel about the now middle-aged Dan Torrance (the boy protagonist of The Shining) and the very special 12-year-old girl he must save from a tribe of murderous paranormals.\n" +
+        Novel doctorSleep = new Novel("Doctor Sleep", DateUtility.toInstant("2013-09-24"), Language.ENGLISH, Genre.HORROR, "https://images.gr-assets.com/books/1457473537l/18741301.jpg",
+                                        4.1f, stephenKing, 531, true, true, "Stephen King returns to the characters and territory of one of his most popular novels ever, The Shining, in this instantly riveting novel about the now middle-aged Dan Torrance (the boy protagonist of The Shining) and the very special 12-year-old girl he must save from a tribe of murderous paranormals.\n" +
                 "\n" +
                 "On highways across America, a tribe of people called The True Knot travel in search of sustenance. They look harmless - mostly old, lots of polyester, and married to their RVs. But as Dan Torrance knows, and spunky 12-year-old Abra Stone learns, The True Knot are quasi-immortal, living off the \"steam\" that children with the \"shining\" produce when they are slowly tortured to death.\n" +
                 "\n" +
                 "Haunted by the inhabitants of the Overlook Hotel where he spent one horrific childhood year, Dan has been drifting for decades, desperate to shed his father's legacy of despair, alcoholism, and violence. Finally, he settles in a New Hampshire town, an AA community that sustains him, and a job at a nursing home where his remnant \"shining\" power provides the crucial final comfort to the dying. Aided by a prescient cat, he becomes \"Doctor Sleep.\"\n" +
                 "\n" +
                 "Then Dan meets the evanescent Abra Stone, and it is her spectacular gift, the brightest shining ever seen, that reignites Dan's own demons and summons him to a battle for Abra's soul and survival. This is an epic war between good and evil, a gory, glorious story that will thrill the millions of hyper-devoted fans of The Shining and wildly satisfy anyone new to the territory of this icon in the King canon.");
-        book2.setBlackAndWhite(true);
-        this.bookRepository.save(book2);
+        this.bookRepository.save(doctorSleep);
 
-        Novel book3 = new Novel();
-        book3.setTitle("Hunger");
-        book3.setAuthor(author2);
-        book3.setPages(320);
-        book3.setLanguage(Language.ENGLISH);
-        book3.setGenre(Genre.MEMORY);
-        book3.setYear(DateUtility.toInstant("2017-06-13"));
-        book3.setRating(5f);
-        book3.setImage("https://images.gr-assets.com/books/1449810298l/22813605.jpg");
-        book3.setSeries(false);
-        book3.setSummary("New York Times bestselling author Roxane Gay has written with intimacy and sensitivity about food and bodies, using her own emotional and psychological struggles as a means of exploring our shared anxieties over pleasure, consumption, appearance, and health. As a woman who describes her own body as “wildly undisciplined,” Roxane understands the tension between desire and denial, between self-comfort and self-care. In Hunger, she casts an insightful and critical eye on her childhood, teens, and twenties—including the devastating act of violence that acted as a turning point in her young life—and brings readers into the present and the realities, pains, and joys of her daily life.\n" +
+        Novel hunger = new Novel("Hunger", DateUtility.toInstant("2017-06-13"), Language.ENGLISH, Genre.MYSTERY, "https://images.gr-assets.com/books/1449810298l/22813605.jpg",
+                                    5f, roxaneGay, 320, true, false, "New York Times bestselling author Roxane Gay has written with intimacy and sensitivity about food and bodies, using her own emotional and psychological struggles as a means of exploring our shared anxieties over pleasure, consumption, appearance, and health. As a woman who describes her own body as “wildly undisciplined,” Roxane understands the tension between desire and denial, between self-comfort and self-care. In Hunger, she casts an insightful and critical eye on her childhood, teens, and twenties—including the devastating act of violence that acted as a turning point in her young life—and brings readers into the present and the realities, pains, and joys of her daily life.\n" +
                 "\n" +
-                "With the bracing candor, vulnerability, and authority that have made her one of the most admired voices of her generation, Roxane explores what it means to be overweight in a time when the bigger you are, the less you are seen. Hunger is a deeply personal memoir from one of our finest writers, and tells a story that hasn’t yet been told but needs to be.  ");
-        book3.setBlackAndWhite(true);
-        this.bookRepository.save(book3);
+                "With the bracing candor, vulnerability, and authority that have made her one of the most admired voices of her generation, Roxane explores what it means to be overweight in a time when the bigger you are, the less you are seen. Hunger is a deeply personal memoir from one of our finest writers, and tells a story that hasn’t yet been told but needs to be.");
+        this.bookRepository.save(hunger);
 
-        Novel book5 = new Novel();
-        book5.setTitle("The Shining");
-        book5.setAuthor(author1);
-        book5.setPages(447);
-        book5.setLanguage(Language.ENGLISH);
-        book5.setGenre(Genre.HORROR);
-        book5.setYear(DateUtility.toInstant("1977-01-28"));
-        book5.setRating(4.19f);
-        book5.setImage("https://images.gr-assets.com/books/1353277730l/11588.jpg");
-        book5.setSeries(true);
-        book5.setSummary("Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing. But as the harsh winter weather sets in, the idyllic location feels ever more remote...and more sinister. And the only one to notice the strange and terrible forces gathering around the Overlook is Danny Torrance, a uniquely gifted five-year-old.");
-        book5.setBlackAndWhite(true);
-        this.bookRepository.save(book5);
+        Novel theShining = new Novel("The Shining", DateUtility.toInstant("1977-01-28"), Language.ENGLISH, Genre.HORROR, "https://images.gr-assets.com/books/1353277730l/11588.jpg",
+                                        4.19f, stephenKing, 447, true, true, "Jack Torrance's new job at the Overlook Hotel is the perfect chance for a fresh start. As the off-season caretaker at the atmospheric old hotel, he'll have plenty of time to spend reconnecting with his family and working on his writing. But as the harsh winter weather sets in, the idyllic location feels ever more remote...and more sinister. And the only one to notice the strange and terrible forces gathering around the Overlook is Danny Torrance, a uniquely gifted five-year-old.");
+        this.bookRepository.save(theShining);
 
-        Novel book6 = new Novel();
-        book6.setTitle("What Remains");
-        book6.setAuthor(author4);
-        book6.setPages(288);
-        book6.setLanguage(Language.ENGLISH);
-        book6.setGenre(Genre.YOUNG_ADULT);
-        book6.setYear(DateUtility.toInstant("2015-05-08"));
-        book6.setRating(3.86f);
-        book6.setImage("https://images.gr-assets.com/books/1423498110l/24890845.jpg");
-        book6.setSeries(false);
-        book6.setSummary("In less than a second... two of the things Cal Ryan cares most about—a promising baseball career and Lizzie, one of his best friends—are gone forever. In the hours that follow ... Cal's damaged heart is replaced. But his life will never be the same. Everyone expects him to pick up the pieces and move on. But Lizzie is gone, and all that remains for Cal is an overwhelming sense that her death was his fault. And a voice in his head that just . . . won't . . . stop. Cal thought he and his friends could overcome any obstacle. But grief might be the one exception. And that might take a lifetime to accept . . . ");
-        book6.setBlackAndWhite(true);
-        this.bookRepository.save(book6);
+        Novel whatRemains = new Novel("What Remains", DateUtility.toInstant("2015-05-08"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1423498110l/24890845.jpg",
+                                        3.86f, heleneDunbar, 288, true, false, "In less than a second... two of the things Cal Ryan cares most about—a promising baseball career and Lizzie, one of his best friends—are gone forever. In the hours that follow ... Cal's damaged heart is replaced. But his life will never be the same. Everyone expects him to pick up the pieces and move on. But Lizzie is gone, and all that remains for Cal is an overwhelming sense that her death was his fault. And a voice in his head that just . . . won't . . . stop. Cal thought he and his friends could overcome any obstacle. But grief might be the one exception. And that might take a lifetime to accept . . . " );
+        this.bookRepository.save(whatRemains);
 
-        Novel book7 = new Novel();
-        book7.setTitle("These Gentle Wounds");
-        book7.setAuthor(author4);
-        book7.setPages(307);
-        book7.setLanguage(Language.ENGLISH);
-        book7.setGenre(Genre.YOUNG_ADULT);
-        book7.setYear(DateUtility.toInstant("2015-05-08"));
-        book7.setRating(4.05f);
-        book7.setImage("https://images.gr-assets.com/books/1379606879l/18187029.jpg");
-        book7.setSeries(false);
-        book7.setSummary("Sometimes I wish I’d lost a leg or something. Everyone can understand that. They never get it when what’s been broken is inside your head.\n" +
+        //TODO fix name and whole constructor
+        Novel theeseGentleWounds = new Novel();
+        theeseGentleWounds.setTitle("These Gentle Wounds");
+        theeseGentleWounds.setAuthor(heleneDunbar);
+        theeseGentleWounds.setPages(307);
+        theeseGentleWounds.setLanguage(Language.ENGLISH);
+        theeseGentleWounds.setGenre(Genre.YOUNG_ADULT);
+        theeseGentleWounds.setYear(DateUtility.toInstant("2015-05-08"));
+        theeseGentleWounds.setRating(4.05f);
+        theeseGentleWounds.setImage("https://images.gr-assets.com/books/1379606879l/18187029.jpg");
+        theeseGentleWounds.setSeries(false);
+        theeseGentleWounds.setSummary("Sometimes I wish I’d lost a leg or something. Everyone can understand that. They never get it when what’s been broken is inside your head.\n" +
                 "\n" +
                 "Five years after an unspeakable tragedy that changed him forever, Gordie Allen has made a new home with his half-brother Kevin. Their arrangement works since Kevin is the only person who can protect Gordie at school and keep him focused on getting his life back on track. \n" +
                 "\n" +
                 "But just when it seems like things are becoming normal, Gordie’s biological father comes back into the picture, demanding a place in his life. Now there’s nothing to stop Gordie from falling into a tailspin that could cost him everything—including his relationship with Sarah, the first girl he’s trusted with the truth. With his world spinning out of control, the only one who can help Gordie is himself . . . if he can find the strength to confront the past and take back his future.");
-        book7.setBlackAndWhite(true);
-        this.bookRepository.save(book7);
+        theeseGentleWounds.setBlackAndWhite(true);
+        this.bookRepository.save(theeseGentleWounds);
 
-        Novel book8 = new Novel();
-        book8.setTitle("Looking for Alaska");
-        book8.setAuthor(author5);
-        book8.setPages(221);
-        book8.setLanguage(Language.ENGLISH);
-        book8.setGenre(Genre.YOUNG_ADULT);
-        book8.setYear(DateUtility.toInstant("2006-12-28"));
-        book8.setRating(4.07f);
-        book8.setImage("https://images.gr-assets.com/books/1423498110l/24890845.jpg");
-        book8.setSeries(false);
-        book8.setSummary("Before. Miles “Pudge” Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave “the Great Perhaps” even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then. . . . \n" +
+        Novel lookingForAlaska = new Novel();
+        lookingForAlaska.setTitle("Looking for Alaska");
+        lookingForAlaska.setAuthor(johnGreen);
+        lookingForAlaska.setPages(221);
+        lookingForAlaska.setLanguage(Language.ENGLISH);
+        lookingForAlaska.setGenre(Genre.YOUNG_ADULT);
+        lookingForAlaska.setYear(DateUtility.toInstant("2006-12-28"));
+        lookingForAlaska.setRating(4.07f);
+        lookingForAlaska.setImage("https://images.gr-assets.com/books/1423498110l/24890845.jpg");
+        lookingForAlaska.setSeries(false);
+        lookingForAlaska.setSummary("Before. Miles “Pudge” Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave “the Great Perhaps” even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then. . . . \n" +
                 "After. Nothing is ever the same.");
-        book8.setBlackAndWhite(true);
-        this.bookRepository.save(book8);
+        lookingForAlaska.setBlackAndWhite(true);
+        this.bookRepository.save(lookingForAlaska);
 
-        Novel book9 = new Novel();
-        book9.setTitle("The Fault in Our Stars");
-        book9.setAuthor(author5);
-        book9.setPages(313);
-        book9.setLanguage(Language.ENGLISH);
-        book9.setGenre(Genre.YOUNG_ADULT);
-        book9.setYear(DateUtility.toInstant("2012-01-10"));
-        book9.setRating(4.24f);
-        book9.setImage("https://images.gr-assets.com/books/1360206420l/11870085.jpg");
-        book9.setSeries(false);
-        book9.setSummary("Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.\n" +
+        Novel theFaultInOurStars = new Novel();
+        theFaultInOurStars.setTitle("The Fault in Our Stars");
+        theFaultInOurStars.setAuthor(johnGreen);
+        theFaultInOurStars.setPages(313);
+        theFaultInOurStars.setLanguage(Language.ENGLISH);
+        theFaultInOurStars.setGenre(Genre.YOUNG_ADULT);
+        theFaultInOurStars.setYear(DateUtility.toInstant("2012-01-10"));
+        theFaultInOurStars.setRating(4.24f);
+        theFaultInOurStars.setImage("https://images.gr-assets.com/books/1360206420l/11870085.jpg");
+        theFaultInOurStars.setSeries(false);
+        theFaultInOurStars.setSummary("Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.\n" +
                 "\n" +
                 "Insightful, bold, irreverent, and raw, The Fault in Our Stars is award-winning author John Green's most ambitious and heartbreaking work yet, brilliantly exploring the funny, thrilling, and tragic business of being alive and in love.");
-        book9.setBlackAndWhite(true);
-        this.bookRepository.save(book9);
+        theFaultInOurStars.setBlackAndWhite(true);
+        this.bookRepository.save(theFaultInOurStars);
 
-        Novel book10 = new Novel();
-        book10.setTitle("Paper Towns");
-        book10.setAuthor(author5);
-        book10.setPages(305);
-        book10.setLanguage(Language.ENGLISH);
-        book10.setGenre(Genre.YOUNG_ADULT);
-        book10.setYear(DateUtility.toInstant("2009-09-22"));
-        book10.setRating(3.86f);
-        book10.setImage("https://images.gr-assets.com/books/1349013610l/6442769.jpg");
-        book10.setSeries(false);
-        book10.setSummary("Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew...");
-        book10.setBlackAndWhite(true);
-        this.bookRepository.save(book10);
+        Novel paperTowns = new Novel();
+        paperTowns.setTitle("Paper Towns");
+        paperTowns.setAuthor(johnGreen);
+        paperTowns.setPages(305);
+        paperTowns.setLanguage(Language.ENGLISH);
+        paperTowns.setGenre(Genre.YOUNG_ADULT);
+        paperTowns.setYear(DateUtility.toInstant("2009-09-22"));
+        paperTowns.setRating(3.86f);
+        paperTowns.setImage("https://images.gr-assets.com/books/1349013610l/6442769.jpg");
+        paperTowns.setSeries(false);
+        paperTowns.setSummary("Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew...");
+        paperTowns.setBlackAndWhite(true);
+        this.bookRepository.save(paperTowns);
 
-        Novel book11 = new Novel();
-        book11.setTitle("Onyx");
-        book11.setAuthor(author6);
-        book11.setPages(366);
-        book11.setLanguage(Language.ENGLISH);
-        book11.setGenre(Genre.FANTASY);
-        book11.setYear(DateUtility.toInstant("2012-08-14"));
-        book11.setRating(4.32f);
-        book11.setImage("https://images.gr-assets.com/books/1329408511l/13047090.jpg");
-        book11.setSeries(true);
-        book11.setSummary("Being connected to Daemon Black sucks…\n" +
+        Novel onyx = new Novel();
+        onyx.setTitle("Onyx");
+        onyx.setAuthor(jennferArmentrout);
+        onyx.setPages(366);
+        onyx.setLanguage(Language.ENGLISH);
+        onyx.setGenre(Genre.FANTASY);
+        onyx.setYear(DateUtility.toInstant("2012-08-14"));
+        onyx.setRating(4.32f);
+        onyx.setImage("https://images.gr-assets.com/books/1329408511l/13047090.jpg");
+        onyx.setSeries(true);
+        onyx.setSummary("Being connected to Daemon Black sucks…\n" +
                 "\n" +
                 "Thanks to his alien mojo, Daemon’s determined to prove what he feels for me is more than a product of our bizarro connection. So I’ve sworn him off, even though he’s running more hot than cold these days. But we’ve got bigger problems.\n" +
                 "\n" +
@@ -302,20 +186,20 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "I’ve seen someone who shouldn’t be alive. And I have to tell Daemon, even though I know he’s never going to stop searching until he gets the truth. What happened to his brother? Who betrayed him? And what does the DOD want from them—from me?\n" +
                 "\n" +
                 "No one is who they seem. And not everyone will survive the lies…");
-        book11.setBlackAndWhite(true);
-        this.bookRepository.save(book11);
+        onyx.setBlackAndWhite(true);
+        this.bookRepository.save(onyx);
 
-        Novel book12 = new Novel();
-        book12.setTitle("Obsidian");
-        book12.setAuthor(author6);
-        book12.setPages(335);
-        book12.setLanguage(Language.ENGLISH);
-        book12.setGenre(Genre.FANTASY);
-        book12.setYear(DateUtility.toInstant("2012-05-08"));
-        book12.setRating(4.22f);
-        book12.setImage("http://t0.gstatic.com/images?q=tbn:ANd9GcRnK_veIP5Fr3a1CRS_B5e3Y93knzNq5ekf8I_C1de-1aZn6gtH");
-        book12.setSeries(true);
-        book12.setSummary("Starting over sucks.\n" +
+        Novel obsidian = new Novel();
+        obsidian.setTitle("Obsidian");
+        obsidian.setAuthor(jennferArmentrout);
+        obsidian.setPages(335);
+        obsidian.setLanguage(Language.ENGLISH);
+        obsidian.setGenre(Genre.FANTASY);
+        obsidian.setYear(DateUtility.toInstant("2012-05-08"));
+        obsidian.setRating(4.22f);
+        obsidian.setImage("http://t0.gstatic.com/images?q=tbn:ANd9GcRnK_veIP5Fr3a1CRS_B5e3Y93knzNq5ekf8I_C1de-1aZn6gtH");
+        obsidian.setSeries(true);
+        obsidian.setSummary("Starting over sucks.\n" +
                 "\n" +
                 "When we moved to West Virginia right before my senior year, I’d pretty much resigned myself to thick accents, dodgy internet access, and a whole lot of boring… until I spotted my hot neighbor, with his looming height and eerie green eyes. Things were looking up.\n" +
                 "\n" +
@@ -328,39 +212,39 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "You heard me. Alien. Turns out Daemon and his sister have a galaxy of enemies wanting to steal their abilities, and Daemon’s touch has me lit up like the Vegas Strip. The only way I’m getting out of this alive is by sticking close to Daemon until my alien mojo fades. \n" +
                 "\n" +
                 "If I don’t kill him first, that is.");
-        book12.setBlackAndWhite(true);
-        this.bookRepository.save(book12);
+        obsidian.setBlackAndWhite(true);
+        this.bookRepository.save(obsidian);
 
-        Novel book13 = new Novel();
-        book13.setTitle("The Hunger Games");
-        book13.setAuthor(author7);
-        book13.setPages(374);
-        book13.setLanguage(Language.ENGLISH);
-        book13.setGenre(Genre.YOUNG_ADULT);
-        book13.setYear(DateUtility.toInstant("2008-09-14"));
-        book13.setRating(4.33f);
-        book13.setImage("https://images.gr-assets.com/books/1447303603l/2767052.jpg");
-        book13.setSeries(true);
-        book13.setSummary("Winning will make you famous. \n" +
+        Novel theHungerGames = new Novel();
+        theHungerGames.setTitle("The Hunger Games");
+        theHungerGames.setAuthor(suzanneCollins);
+        theHungerGames.setPages(374);
+        theHungerGames.setLanguage(Language.ENGLISH);
+        theHungerGames.setGenre(Genre.YOUNG_ADULT);
+        theHungerGames.setYear(DateUtility.toInstant("2008-09-14"));
+        theHungerGames.setRating(4.33f);
+        theHungerGames.setImage("https://images.gr-assets.com/books/1447303603l/2767052.jpg");
+        theHungerGames.setSeries(true);
+        theHungerGames.setSummary("Winning will make you famous. \n" +
                 "Losing means certain death.\n" +
                 "\n" +
                 "The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.\n" +
                 "\n" +
                 "When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.");
-        book13.setBlackAndWhite(true);
-        this.bookRepository.save(book13);
+        theHungerGames.setBlackAndWhite(true);
+        this.bookRepository.save(theHungerGames);
 
-        Novel book14 = new Novel();
-        book14.setTitle("Catching Fire");
-        book14.setAuthor(author7);
-        book14.setPages(391);
-        book14.setLanguage(Language.ENGLISH);
-        book14.setGenre(Genre.SCIENCE_FICTION);
-        book14.setYear(DateUtility.toInstant("2009-09-01"));
-        book14.setRating(4.29f);
-        book14.setImage("https://images.gr-assets.com/books/1358273780l/6148028.jpg");
-        book14.setSeries(true);
-        book14.setSummary("Sparks are igniting.\n" +
+        Novel catchingFire = new Novel();
+        catchingFire.setTitle("Catching Fire");
+        catchingFire.setAuthor(suzanneCollins);
+        catchingFire.setPages(391);
+        catchingFire.setLanguage(Language.ENGLISH);
+        catchingFire.setGenre(Genre.SCIENCE_FICTION);
+        catchingFire.setYear(DateUtility.toInstant("2009-09-01"));
+        catchingFire.setRating(4.29f);
+        catchingFire.setImage("https://images.gr-assets.com/books/1358273780l/6148028.jpg");
+        catchingFire.setSeries(true);
+        catchingFire.setSummary("Sparks are igniting.\n" +
                 "Flames are spreading.\n" +
                 "And the Capitol wants revenge.\n" +
                 "\n" +
@@ -369,20 +253,20 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "Much to her shock, Katniss has fueled an unrest she's afraid she cannot stop. And what scares her even more is that she's not entirely convinced she should try. As time draws near for Katniss and Peeta to visit the districts on the Capitol's cruel Victory Tour, the stakes are higher than ever. If they can't prove, without a shadow of a doubt, that they are lost in their love for each other, the consequences will be horrifying.\n" +
                 "\n" +
                 "In Catching Fire, the second novel in the Hunger Games trilogy, Suzanne Collins continues the story of Katniss Everdeen, testing her more than ever before...and surprising readers at every turn.");
-        book14.setBlackAndWhite(true);
-        this.bookRepository.save(book14);
+        catchingFire.setBlackAndWhite(true);
+        this.bookRepository.save(catchingFire);
 
-        Novel book15 = new Novel();
-        book15.setTitle("Mockingjay");
-        book15.setAuthor(author7);
-        book15.setPages(392);
-        book15.setLanguage(Language.ENGLISH);
-        book15.setGenre(Genre.SCIENCE_FICTION);
-        book15.setYear(DateUtility.toInstant("2010-08-24"));
-        book15.setRating(4.03f);
-        book15.setImage("https://images.gr-assets.com/books/1358275419l/7260188.jpg");
-        book15.setSeries(true);
-        book15.setSummary("My name is Katniss Everdeen.\n" +
+        Novel mockingjay = new Novel();
+        mockingjay.setTitle("Mockingjay");
+        mockingjay.setAuthor(suzanneCollins);
+        mockingjay.setPages(392);
+        mockingjay.setLanguage(Language.ENGLISH);
+        mockingjay.setGenre(Genre.SCIENCE_FICTION);
+        mockingjay.setYear(DateUtility.toInstant("2010-08-24"));
+        mockingjay.setRating(4.03f);
+        mockingjay.setImage("https://images.gr-assets.com/books/1358275419l/7260188.jpg");
+        mockingjay.setSeries(true);
+        mockingjay.setSummary("My name is Katniss Everdeen.\n" +
                 "Why am I not dead?\n" +
                 "I should be dead.\n" +
                 "\n" +
@@ -391,105 +275,105 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "It is by design that Katniss was rescued from the arena in the cruel and haunting Quarter Quell, and it is by design that she has long been part of the revolution without knowing it. District 13 has come out of the shadows and is plotting to overthrow the Capitol. Everyone, it seems, has had a hand in the carefully laid plans--except Katniss.\n" +
                 "\n" +
                 "The success of the rebellion hinges on Katniss's willingness to be a pawn, to accept responsibility for countless lives, and to change the course of the future of Panem. To do this, she must put aside her feelings of anger and distrust. She must become the rebels' Mockingjay--no matter what the personal cost.");
-        book15.setBlackAndWhite(true);
-        this.bookRepository.save(book15);
+        mockingjay.setBlackAndWhite(true);
+        this.bookRepository.save(mockingjay);
 
-        Novel book16 = new Novel();
-        book16.setTitle("Divergent");
-        book16.setAuthor(author8);
-        book16.setPages(487);
-        book16.setLanguage(Language.ENGLISH);
-        book16.setGenre(Genre.FICTION);
-        book16.setYear(DateUtility.toInstant("2012-02-28"));
-        book16.setRating(4.22f);
-        book16.setImage("https://images.gr-assets.com/books/1328559506l/13335037.jpg");
-        book16.setSeries(true);
-        book16.setSummary("In Beatrice Prior's dystopian Chicago world, society is divided into five factions, each dedicated to the cultivation of a particular virtue—Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is—she can't have both. So she makes a choice that surprises everyone, including herself.\n" +
+        Novel divergent = new Novel();
+        divergent.setTitle("Divergent");
+        divergent.setAuthor(veronicaRoth);
+        divergent.setPages(487);
+        divergent.setLanguage(Language.ENGLISH);
+        divergent.setGenre(Genre.FICTION);
+        divergent.setYear(DateUtility.toInstant("2012-02-28"));
+        divergent.setRating(4.22f);
+        divergent.setImage("https://images.gr-assets.com/books/1328559506l/13335037.jpg");
+        divergent.setSeries(true);
+        divergent.setSummary("In Beatrice Prior's dystopian Chicago world, society is divided into five factions, each dedicated to the cultivation of a particular virtue—Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is—she can't have both. So she makes a choice that surprises everyone, including herself.\n" +
                 "\n" +
                 "During the highly competitive initiation that follows, Beatrice renames herself Tris and struggles alongside her fellow initiates to live out the choice they have made. Together they must undergo extreme physical tests of endurance and intense psychological simulations, some with devastating consequences. As initiation transforms them all, Tris must determine who her friends really are—and where, exactly, a romance with a sometimes fascinating, sometimes exasperating boy fits into the life she's chosen. But Tris also has a secret, one she's kept hidden from everyone because she's been warned it can mean death. And as she discovers unrest and growing conflict that threaten to unravel her seemingly perfect society, she also learns that her secret might help her save those she loves . . . or it might destroy her.");
-        book16.setBlackAndWhite(true);
-        this.bookRepository.save(book16);
+        divergent.setBlackAndWhite(true);
+        this.bookRepository.save(divergent);
 
-        Novel book17 = new Novel();
-        book17.setTitle("Insurgent");
-        book17.setAuthor(author8);
-        book17.setPages(525);
-        book17.setLanguage(Language.ENGLISH);
-        book17.setGenre(Genre.YOUNG_ADULT);
-        book17.setYear(DateUtility.toInstant("2012-05-01"));
-        book17.setRating(4.06f);
-        book17.setImage("https://images.gr-assets.com/books/1325667729l/11735983.jpg");
-        book17.setSeries(true);
-        book17.setSummary("One choice can transform you—or it can destroy you. But every choice has consequences, and as unrest surges in the factions all around her, Tris Prior must continue trying to save those she loves—and herself—while grappling with haunting questions of grief and forgiveness, identity and loyalty, politics and love.\n" +
+        Novel insurgent = new Novel();
+        insurgent.setTitle("Insurgent");
+        insurgent.setAuthor(veronicaRoth);
+        insurgent.setPages(525);
+        insurgent.setLanguage(Language.ENGLISH);
+        insurgent.setGenre(Genre.YOUNG_ADULT);
+        insurgent.setYear(DateUtility.toInstant("2012-05-01"));
+        insurgent.setRating(4.06f);
+        insurgent.setImage("https://images.gr-assets.com/books/1325667729l/11735983.jpg");
+        insurgent.setSeries(true);
+        insurgent.setSummary("One choice can transform you—or it can destroy you. But every choice has consequences, and as unrest surges in the factions all around her, Tris Prior must continue trying to save those she loves—and herself—while grappling with haunting questions of grief and forgiveness, identity and loyalty, politics and love.\n" +
                 "\n" +
                 "Tris's initiation day should have been marked by celebration and victory with her chosen faction; instead, the day ended with unspeakable horrors. War now looms as conflict between the factions and their ideologies grows. And in times of war, sides must be chosen, secrets will emerge, and choices will become even more irrevocable—and even more powerful. Transformed by her own decisions but also by haunting grief and guilt, radical new discoveries, and shifting relationships, Tris must fully embrace her Divergence, even if she does not know what she may lose by doing so.\n" +
                 "\n" +
                 "New York Times bestselling author Veronica Roth's much-anticipated second book of the dystopian DIVERGENT series is another intoxicating thrill ride of a story, rich with hallmark twists, heartbreaks, romance, and powerful insights about human nature. ");
-        book17.setBlackAndWhite(true);
-        this.bookRepository.save(book17);
+        insurgent.setBlackAndWhite(true);
+        this.bookRepository.save(insurgent);
 
-        Novel book18 = new Novel();
-        book18.setTitle("Allegiant");
-        book18.setAuthor(author8);
-        book18.setPages(526);
-        book18.setLanguage(Language.ENGLISH);
-        book18.setGenre(Genre.SCIENCE_FICTION);
-        book18.setYear(DateUtility.toInstant("2013-10-22"));
-        book18.setRating(3.63f);
-        book18.setImage("https://images.gr-assets.com/books/1395582745l/18710190.jpg");
-        book18.setSeries(true);
-        book18.setSummary("Grca badge winner\n" +
+        Novel allegiant = new Novel();
+        allegiant.setTitle("Allegiant");
+        allegiant.setAuthor(veronicaRoth);
+        allegiant.setPages(526);
+        allegiant.setLanguage(Language.ENGLISH);
+        allegiant.setGenre(Genre.SCIENCE_FICTION);
+        allegiant.setYear(DateUtility.toInstant("2013-10-22"));
+        allegiant.setRating(3.63f);
+        allegiant.setImage("https://images.gr-assets.com/books/1395582745l/18710190.jpg");
+        allegiant.setSeries(true);
+        allegiant.setSummary("Grca badge winner\n" +
                 "The faction-based society that Tris Prior once believed in is shattered - fractured by violence and power struggles and scarred by loss and betrayal. So when offered a chance to explore the world past the limits she's known, Tris is ready. Perhaps beyond the fence, she and Tobias will find a simple new life together, free from complicated lies, tangled loyalties, and painful memories.\n" +
                 "\n" +
                 "But Tris's new reality is even more alarming than the one she left behind. Old discoveries are quickly rendered meaningliess. Explosive new truths change the hearts of those she loves. And once again, Tris must battle to comprehend to complexities of human nature - and of herself - while facing impossible choices about courage, allegiance, sacrifice, and love.\n" +
                 "\n" +
                 "Told from a riveting dual perspective, ALLEGIANT, by #1 New York Times best-selling author Veronica Roth, brings the DIVERGENT series to a powerful conclusion while revealing the secrets of the dystopian world that has captivated millions of readers in DIVERGENT and INSURGENT.");
-        book18.setBlackAndWhite(true);
-        this.bookRepository.save(book18);
+        allegiant.setBlackAndWhite(true);
+        this.bookRepository.save(allegiant);
 
-        Novel book19 = new Novel();
-        book19.setTitle("A Game of Thrones");
-        book19.setAuthor(author9);
-        book19.setPages(848);
-        book19.setLanguage(Language.ENGLISH);
-        book19.setGenre(Genre.FANTASY);
-        book19.setYear(DateUtility.toInstant("1996-08-06"));
-        book19.setRating(4.45f);
-        book19.setImage("https://images.gr-assets.com/books/1436732693l/13496.jpg");
-        book19.setSeries(true);
-        book19.setSummary("Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister and supernatural forces are massing beyond the kingdom’s protective Wall. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the land they were born to. Sweeping from a land of brutal cold to a distant summertime kingdom of epicurean plenty, here is a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens.\n" +
+        Novel aGameOfThrones = new Novel();
+        aGameOfThrones.setTitle("A Game of Thrones");
+        aGameOfThrones.setAuthor(georgeMartin);
+        aGameOfThrones.setPages(848);
+        aGameOfThrones.setLanguage(Language.ENGLISH);
+        aGameOfThrones.setGenre(Genre.FANTASY);
+        aGameOfThrones.setYear(DateUtility.toInstant("1996-08-06"));
+        aGameOfThrones.setRating(4.45f);
+        aGameOfThrones.setImage("https://images.gr-assets.com/books/1436732693l/13496.jpg");
+        aGameOfThrones.setSeries(true);
+        aGameOfThrones.setSummary("Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister and supernatural forces are massing beyond the kingdom’s protective Wall. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the land they were born to. Sweeping from a land of brutal cold to a distant summertime kingdom of epicurean plenty, here is a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens.\n" +
                 "\n" +
                 "Here an enigmatic band of warriors bear swords of no human metal; a tribe of fierce wildlings carry men off into madness; a cruel young dragon prince barters his sister to win back his throne; and a determined woman undertakes the most treacherous of journeys. Amid plots and counterplots, tragedy and betrayal, victory and terror, the fate of the Starks, their allies, and their enemies hangs perilously in the balance, as each endeavors to win that deadliest of conflicts: the game of thrones.");
-        book19.setBlackAndWhite(true);
-        this.bookRepository.save(book19);
+        aGameOfThrones.setBlackAndWhite(true);
+        this.bookRepository.save(aGameOfThrones);
 
-        Novel book20 = new Novel();
-        book20.setTitle("A Feast for Crows");
-        book20.setAuthor(author9);
-        book20.setPages(1061);
-        book20.setLanguage(Language.ENGLISH);
-        book20.setGenre(Genre.FANTASY);
-        book20.setYear(DateUtility.toInstant("2005-10-17"));
-        book20.setRating(4.12f);
-        book20.setImage("https://images.gr-assets.com/books/1429538615l/13497.jpg");
-        book20.setSeries(true);
-        book20.setSummary("With A Feast for Crows, Martin delivers the long-awaited fourth volume of the landmark series that has redefined imaginative fiction and stands as a modern masterpiece in the making.\n" +
+        Novel aFeastForCrows = new Novel();
+        aFeastForCrows.setTitle("A Feast for Crows");
+        aFeastForCrows.setAuthor(georgeMartin);
+        aFeastForCrows.setPages(1061);
+        aFeastForCrows.setLanguage(Language.ENGLISH);
+        aFeastForCrows.setGenre(Genre.FANTASY);
+        aFeastForCrows.setYear(DateUtility.toInstant("2005-10-17"));
+        aFeastForCrows.setRating(4.12f);
+        aFeastForCrows.setImage("https://images.gr-assets.com/books/1429538615l/13497.jpg");
+        aFeastForCrows.setSeries(true);
+        aFeastForCrows.setSummary("With A Feast for Crows, Martin delivers the long-awaited fourth volume of the landmark series that has redefined imaginative fiction and stands as a modern masterpiece in the making.\n" +
                 "\n" +
                 "After centuries of bitter strife, the seven powers dividing the land have beaten one another into an uneasy truce. But it's not long before the survivors, outlaws, renegades, and carrion eaters of the Seven Kingdoms gather. Now, as the human crows assemble over a banquet of ashes, daring new plots and dangerous new alliances are formed while surprising faces—some familiar, others only just appearing—emerge from an ominous twilight of past struggles and chaos to take up the challenges of the terrible times ahead. Nobles and commoners, soldiers and sorcerers, assassins and sages, are coming together to stake their fortunes...and their lives. For at a feast for crows, many are the guests—but only a few are the survivors.");
-        book20.setBlackAndWhite(true);
-        this.bookRepository.save(book20);
+        aFeastForCrows.setBlackAndWhite(true);
+        this.bookRepository.save(aFeastForCrows);
 
-        Novel book21 = new Novel();
-        book21.setTitle("The Maze Runner");
-        book21.setAuthor(author10);
-        book21.setPages(384);
-        book21.setLanguage(Language.ENGLISH);
-        book21.setGenre(Genre.YOUNG_ADULT);
-        book21.setYear(DateUtility.toInstant("2009-10-06"));
-        book21.setRating(4.03f);
-        book21.setImage("https://images.gr-assets.com/books/1375596592l/6186357.jpg");
-        book21.setSeries(true);
-        book21.setSummary("If you ain’t scared, you ain’t human.\n" +
+        Novel theMazeRunner = new Novel();
+        theMazeRunner.setTitle("The Maze Runner");
+        theMazeRunner.setAuthor(jamesDasher);
+        theMazeRunner.setPages(384);
+        theMazeRunner.setLanguage(Language.ENGLISH);
+        theMazeRunner.setGenre(Genre.YOUNG_ADULT);
+        theMazeRunner.setYear(DateUtility.toInstant("2009-10-06"));
+        theMazeRunner.setRating(4.03f);
+        theMazeRunner.setImage("https://images.gr-assets.com/books/1375596592l/6186357.jpg");
+        theMazeRunner.setSeries(true);
+        theMazeRunner.setSummary("If you ain’t scared, you ain’t human.\n" +
                 "\n" +
                 "When Thomas wakes up in the lift, the only thing he can remember is his name. He’s surrounded by strangers—boys whose memories are also gone.\n" +
                 "\n" +
@@ -502,20 +386,20 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "Then a girl arrives. The first girl ever. And the message she delivers is terrifying.\n" +
                 "\n" +
                 "Remember. Survive. Run.");
-        book21.setBlackAndWhite(true);
-        this.bookRepository.save(book21);
+        theMazeRunner.setBlackAndWhite(true);
+        this.bookRepository.save(theMazeRunner);
 
-        Novel book22 = new Novel();
-        book22.setTitle("The Eye of Minds");
-        book22.setAuthor(author10);
-        book22.setPages(384);
-        book22.setLanguage(Language.ENGLISH);
-        book22.setGenre(Genre.SCIENCE);
-        book22.setYear(DateUtility.toInstant("2013-09-27"));
-        book22.setRating(3.86f);
-        book22.setImage("https://images.gr-assets.com/books/1358659346l/16279856.jpg");
-        book22.setSeries(true);
-        book22.setSummary("Michael is a gamer. And like most gamers, he almost spends more time on the VirtNet than in the actual world. The VirtNet offers total mind and body immersion, and it’s addictive. Thanks to technology, anyone with enough money can experience fantasy worlds, risk their life without the chance of death, or just hang around with Virt-friends. And the more hacking skills you have, the more fun. Why bother following the rules when most of them are dumb, anyway?\n" +
+        Novel theEyeOfMinds = new Novel();
+        theEyeOfMinds.setTitle("The Eye of Minds");
+        theEyeOfMinds.setAuthor(jamesDasher);
+        theEyeOfMinds.setPages(384);
+        theEyeOfMinds.setLanguage(Language.ENGLISH);
+        theEyeOfMinds.setGenre(Genre.SCIENCE);
+        theEyeOfMinds.setYear(DateUtility.toInstant("2013-09-27"));
+        theEyeOfMinds.setRating(3.86f);
+        theEyeOfMinds.setImage("https://images.gr-assets.com/books/1358659346l/16279856.jpg");
+        theEyeOfMinds.setSeries(true);
+        theEyeOfMinds.setSummary("Michael is a gamer. And like most gamers, he almost spends more time on the VirtNet than in the actual world. The VirtNet offers total mind and body immersion, and it’s addictive. Thanks to technology, anyone with enough money can experience fantasy worlds, risk their life without the chance of death, or just hang around with Virt-friends. And the more hacking skills you have, the more fun. Why bother following the rules when most of them are dumb, anyway?\n" +
                 "\n" +
                 "But some rules were made for a reason. Some technology is too dangerous to fool with. And recent reports claim that one gamer is going beyond what any gamer has done before: he’s holding players hostage inside the VirtNet. The effects are horrific—the hostages have all been declared brain-dead. Yet the gamer’s motives are a mystery.\n" +
                 "\n" +
@@ -524,79 +408,79 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "And they’ve been watching Michael. They want him on their team.\n" +
                 "\n" +
                 "But the risk is enormous. If he accepts their challenge, Michael will need to go off the VirtNet grid. There are back alleys and corners in the system human eyes have never seen and predators he can’t even fathom—and there’s the possibility that the line between game and reality will be blurred forever.");
-        book22.setBlackAndWhite(true);
-        this.bookRepository.save(book22);
+        theEyeOfMinds.setBlackAndWhite(true);
+        this.bookRepository.save(theEyeOfMinds);
 
-        Novel book23 = new Novel();
-        book23.setTitle("The Journal of Curious Letters");
-        book23.setAuthor(author10);
-        book23.setPages(432);
-        book23.setLanguage(Language.ENGLISH);
-        book23.setGenre(Genre.FANTASY);
-        book23.setYear(DateUtility.toInstant("2008-03-03"));
-        book23.setRating(3.93f);
-        book23.setImage("https://images.gr-assets.com/books/1414559824l/2219694.jpg");
-        book23.setSeries(true);
-        book23.setSummary("What if every time you made a choice that had a significant consequence, a new, alternate reality was created--the life that would've been had you made the other choice? What if those new realities were in danger? What if it fell to you to save all the realities? Atticus Higginbottom, a.k.a. Tick, is an average thirteen-year-old boy until the day a strange letter arrives in his mailbox. Postmarked from Alaska and cryptically signed with the initials \"M.G.,\" the letter informs Tick that dangerous--perhaps even deadly--events have been set in motion that could result in the destruction of reality itself. M.G. promises to send Tick twelve riddles that will reveal on a certain day, at a certain time, at a certain place, something extraordinary will happen. Will Tick have the courage to follow the twelve clues M.G. sends to him? Will he be able to solve the riddles in time? Will Tick discover the life he was meant to live? The first volume of an outstanding new children's fantasy series, The Journal of Curious Letters is filled with adventure, humor, riddles, and, oh, yes--danger... As M.G. warns Tick, Very frightening things are coming your way. Will you join Tick and his friends on an amazing journey through the Realities? What will your choice be?");
-        book23.setBlackAndWhite(true);
-        this.bookRepository.save(book23);
+        Novel theJournalOfCuriousLetters = new Novel();
+        theJournalOfCuriousLetters.setTitle("The Journal of Curious Letters");
+        theJournalOfCuriousLetters.setAuthor(jamesDasher);
+        theJournalOfCuriousLetters.setPages(432);
+        theJournalOfCuriousLetters.setLanguage(Language.ENGLISH);
+        theJournalOfCuriousLetters.setGenre(Genre.FANTASY);
+        theJournalOfCuriousLetters.setYear(DateUtility.toInstant("2008-03-03"));
+        theJournalOfCuriousLetters.setRating(3.93f);
+        theJournalOfCuriousLetters.setImage("https://images.gr-assets.com/books/1414559824l/2219694.jpg");
+        theJournalOfCuriousLetters.setSeries(true);
+        theJournalOfCuriousLetters.setSummary("What if every time you made a choice that had a significant consequence, a new, alternate reality was created--the life that would've been had you made the other choice? What if those new realities were in danger? What if it fell to you to save all the realities? Atticus Higginbottom, a.k.a. Tick, is an average thirteen-year-old boy until the day a strange letter arrives in his mailbox. Postmarked from Alaska and cryptically signed with the initials \"M.G.,\" the letter informs Tick that dangerous--perhaps even deadly--events have been set in motion that could result in the destruction of reality itself. M.G. promises to send Tick twelve riddles that will reveal on a certain day, at a certain time, at a certain place, something extraordinary will happen. Will Tick have the courage to follow the twelve clues M.G. sends to him? Will he be able to solve the riddles in time? Will Tick discover the life he was meant to live? The first volume of an outstanding new children's fantasy series, The Journal of Curious Letters is filled with adventure, humor, riddles, and, oh, yes--danger... As M.G. warns Tick, Very frightening things are coming your way. Will you join Tick and his friends on an amazing journey through the Realities? What will your choice be?");
+        theJournalOfCuriousLetters.setBlackAndWhite(true);
+        this.bookRepository.save(theJournalOfCuriousLetters);
 
-        Novel book24 = new Novel();
-        book24.setTitle("The Notebook");
-        book24.setAuthor(author11);
-        book24.setPages(227);
-        book24.setLanguage(Language.ENGLISH);
-        book24.setGenre(Genre.ROMANCE);
-        book24.setYear(DateUtility.toInstant("1996-10-01"));
-        book24.setRating(4.07f);
-        book24.setImage("https://images.gr-assets.com/books/1483183484l/33648131.jpg");
-        book24.setSeries(true);
-        book24.setSummary("Set amid the austere beauty of the North Carolina coast, The Notebook begins with the story of Noah Calhoun, a rural Southerner recently returned form the Second World War. Noah is restoring a plantation home to its former glory, and he is haunted by images of the beautiful girl he met fourteen years earlier, a girl he loved like no other. Unable to find her, yet unwilling to forget the summer they spent together, Noah is content to live with only memories...until she unexpectedly returns to his town to see him once again.\n" +
+        Novel theNotebook = new Novel();
+        theNotebook.setTitle("The Notebook");
+        theNotebook.setAuthor(nicholasSparks);
+        theNotebook.setPages(227);
+        theNotebook.setLanguage(Language.ENGLISH);
+        theNotebook.setGenre(Genre.ROMANCE);
+        theNotebook.setYear(DateUtility.toInstant("1996-10-01"));
+        theNotebook.setRating(4.07f);
+        theNotebook.setImage("https://images.gr-assets.com/books/1483183484l/33648131.jpg");
+        theNotebook.setSeries(true);
+        theNotebook.setSummary("Set amid the austere beauty of the North Carolina coast, The Notebook begins with the story of Noah Calhoun, a rural Southerner recently returned form the Second World War. Noah is restoring a plantation home to its former glory, and he is haunted by images of the beautiful girl he met fourteen years earlier, a girl he loved like no other. Unable to find her, yet unwilling to forget the summer they spent together, Noah is content to live with only memories...until she unexpectedly returns to his town to see him once again.\n" +
                 "\n" +
                 "Like a puzzle within a puzzle, the story of Noah and Allie is just the beginning. As it unfolds, their tale miraculously becomes something different, with much higher stakes. The result is a deeply moving portrait of love itself, the tender moments and the fundamental changes that affect us all. It is a story of miracles and emotions that will stay with you forever.");
-        book24.setBlackAndWhite(true);
-        this.bookRepository.save(book24);
+        theNotebook.setBlackAndWhite(true);
+        this.bookRepository.save(theNotebook);
 
-        Novel book25 = new Novel();
-        book25.setTitle("The Guardian");
-        book25.setAuthor(author11);
-        book25.setPages(400);
-        book25.setLanguage(Language.ENGLISH);
-        book25.setGenre(Genre.ROMANCE);
-        book25.setYear(DateUtility.toInstant("2005-04-01"));
-        book25.setRating(4.15f);
-        book25.setImage("https://images.gr-assets.com/books/1388195339l/15925.jpg");
-        book25.setSeries(false);
-        book25.setSummary("Julie Barenson's young husband left her two unexpected gifts before he died: a Great Dane puppy named Singer and the promise that he would always be watching over her. Now, four years have passed. Still living in the small town of Swansboro, North Carolina, 29-year-old Julie is emotionally ready to make a commitment to someone again. But who? Should it be Richard Franklin, the handsome, sophisticated engineer who treats her like a queen? Or Mike Harris, the down-to-earth nice guy who was her husband's best friend? Choosing one of them should bring her more happiness than she's had in years. Instead, Julie is soon fighting for her life in a nightmare spawned by a chilling deception and jealousy so poisonous that it has become a murderous desire.");
-        book25.setBlackAndWhite(true);
-        this.bookRepository.save(book25);
+        Novel theGuardian = new Novel();
+        theGuardian.setTitle("The Guardian");
+        theGuardian.setAuthor(nicholasSparks);
+        theGuardian.setPages(400);
+        theGuardian.setLanguage(Language.ENGLISH);
+        theGuardian.setGenre(Genre.ROMANCE);
+        theGuardian.setYear(DateUtility.toInstant("2005-04-01"));
+        theGuardian.setRating(4.15f);
+        theGuardian.setImage("https://images.gr-assets.com/books/1388195339l/15925.jpg");
+        theGuardian.setSeries(false);
+        theGuardian.setSummary("Julie Barenson's young husband left her two unexpected gifts before he died: a Great Dane puppy named Singer and the promise that he would always be watching over her. Now, four years have passed. Still living in the small town of Swansboro, North Carolina, 29-year-old Julie is emotionally ready to make a commitment to someone again. But who? Should it be Richard Franklin, the handsome, sophisticated engineer who treats her like a queen? Or Mike Harris, the down-to-earth nice guy who was her husband's best friend? Choosing one of them should bring her more happiness than she's had in years. Instead, Julie is soon fighting for her life in a nightmare spawned by a chilling deception and jealousy so poisonous that it has become a murderous desire.");
+        theGuardian.setBlackAndWhite(true);
+        this.bookRepository.save(theGuardian);
 
-        Novel book26 = new Novel();
-        book26.setTitle("A Walk to Remember");
-        book26.setAuthor(author11);
-        book26.setPages(215);
-        book26.setLanguage(Language.ENGLISH);
-        book26.setGenre(Genre.ROMANCE);
-        book26.setYear(DateUtility.toInstant("2000-05-24"));
-        book26.setRating(4.165f);
-        book26.setImage("https://images.gr-assets.com/books/1498755310l/35545737.jpg");
-        book26.setSeries(false);
-        book26.setSummary("There was a time when the world was sweeter...when the women in Beaufort, North Carolina, wore dresses, and the men donned hats...when something happened to a seventeen-year-old boy that would change his life forever. Every April, when the wind blows in from the sea and mingles with the scent of lilacs, Landon Carter remembers his last year at Beaufort High. It was 1958, and Landon had already dated a girl or two. He even swore that he had once been in love. Certainly the last person in town he thought he'd fall for was Jamie Sullivan, the daughter of the town's Baptist minister. A quiet girl who always carried a Bible with her schoolbooks, Jamie seemed content living in a world apart from the other teens. She took care of her widowed father, rescued hurt animals, and helped out at the local orphanage. No boy had ever asked her out. Landon would never have dreamed of it. Then a twist of fate made Jamie his partner for the homecoming dance, and Landon Carter's life would never be the same. Being with Jamie would show him the depths of the human heart and lead him to a decision so stunning it would send him irrevocably on the road to manhood. No other author today touches our emotions more deeply than Nicholas Sparks.\n" +
+        Novel aWalkToRemember = new Novel();
+        aWalkToRemember.setTitle("A Walk to Remember");
+        aWalkToRemember.setAuthor(nicholasSparks);
+        aWalkToRemember.setPages(215);
+        aWalkToRemember.setLanguage(Language.ENGLISH);
+        aWalkToRemember.setGenre(Genre.ROMANCE);
+        aWalkToRemember.setYear(DateUtility.toInstant("2000-05-24"));
+        aWalkToRemember.setRating(4.165f);
+        aWalkToRemember.setImage("https://images.gr-assets.com/books/1498755310l/35545737.jpg");
+        aWalkToRemember.setSeries(false);
+        aWalkToRemember.setSummary("There was a time when the world was sweeter...when the women in Beaufort, North Carolina, wore dresses, and the men donned hats...when something happened to a seventeen-year-old boy that would change his life forever. Every April, when the wind blows in from the sea and mingles with the scent of lilacs, Landon Carter remembers his last year at Beaufort High. It was 1958, and Landon had already dated a girl or two. He even swore that he had once been in love. Certainly the last person in town he thought he'd fall for was Jamie Sullivan, the daughter of the town's Baptist minister. A quiet girl who always carried a Bible with her schoolbooks, Jamie seemed content living in a world apart from the other teens. She took care of her widowed father, rescued hurt animals, and helped out at the local orphanage. No boy had ever asked her out. Landon would never have dreamed of it. Then a twist of fate made Jamie his partner for the homecoming dance, and Landon Carter's life would never be the same. Being with Jamie would show him the depths of the human heart and lead him to a decision so stunning it would send him irrevocably on the road to manhood. No other author today touches our emotions more deeply than Nicholas Sparks.\n" +
                 "Illuminating both the strength and the gossamer fragility of our deepest emotions, his two New York Times bestsellers, The Notebook and Message in a Bottle, have established him as the leading author of today's most cherished love stories. Now, in A Walk to Remember, he tells a truly unforgettable story, one that glimmers with all of his magic, holding us spellbound-and reminding us that in life each of us may find one great love, the kind that changes everything... ");
-        book26.setBlackAndWhite(true);
-        this.bookRepository.save(book26);
+        aWalkToRemember.setBlackAndWhite(true);
+        this.bookRepository.save(aWalkToRemember);
 
-        Novel book27 = new Novel();
-        book27.setTitle("Twilight");
-        book27.setAuthor(author12);
-        book27.setPages(498);
-        book27.setLanguage(Language.ENGLISH);
-        book27.setGenre(Genre.FANTASY);
-        book27.setYear(DateUtility.toInstant("2005-10-05"));
-        book27.setRating(3.58f);
-        book27.setImage("https://images.gr-assets.com/books/1361039443l/41865.jpg");
-        book27.setSeries(true);
-        book27.setSummary("About three things I was absolutely positive.\n" +
+        Novel twilight = new Novel();
+        twilight.setTitle("Twilight");
+        twilight.setAuthor(stephenieMeyer);
+        twilight.setPages(498);
+        twilight.setLanguage(Language.ENGLISH);
+        twilight.setGenre(Genre.FANTASY);
+        twilight.setYear(DateUtility.toInstant("2005-10-05"));
+        twilight.setRating(3.58f);
+        twilight.setImage("https://images.gr-assets.com/books/1361039443l/41865.jpg");
+        twilight.setSeries(true);
+        twilight.setSummary("About three things I was absolutely positive.\n" +
                 "\n" +
                 "First, Edward was a vampire.\n" +
                 "\n" +
@@ -605,60 +489,60 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "And third, I was unconditionally and irrevocably in love with him.\n" +
                 "\n" +
                 "In the first book of the Twilight Saga, internationally bestselling author Stephenie Meyer introduces Bella Swan and Edward Cullen, a pair of star-crossed lovers whose forbidden relationship ripens against the backdrop of small-town suspicion and a mysterious coven of vampires. This is a love story with bite.");
-        book27.setBlackAndWhite(true);
-        this.bookRepository.save(book27);
+        twilight.setBlackAndWhite(true);
+        this.bookRepository.save(twilight);
 
-        Novel book28 = new Novel();
-        book28.setTitle("The Host");
-        book28.setAuthor(author12);
-        book28.setPages(620);
-        book28.setLanguage(Language.ENGLISH);
-        book28.setGenre(Genre.SCIENCE_FICTION);
-        book28.setYear(DateUtility.toInstant("2008-05-06"));
-        book28.setRating(3.84f);
-        book28.setImage("https://images.gr-assets.com/books/1318009171l/1656001.jpg");
-        book28.setSeries(true);
-        book28.setSummary("Melanie Stryder refuses to fade away. The earth has been invaded by a species that take over the minds of human hosts while leaving their bodies intact. Wanderer, the invading \"soul\" who has been given Melanie's body, didn't expect to find its former tenant refusing to relinquish possession of her mind.\n" +
+        Novel theHost = new Novel();
+        theHost.setTitle("The Host");
+        theHost.setAuthor(stephenieMeyer);
+        theHost.setPages(620);
+        theHost.setLanguage(Language.ENGLISH);
+        theHost.setGenre(Genre.SCIENCE_FICTION);
+        theHost.setYear(DateUtility.toInstant("2008-05-06"));
+        theHost.setRating(3.84f);
+        theHost.setImage("https://images.gr-assets.com/books/1318009171l/1656001.jpg");
+        theHost.setSeries(true);
+        theHost.setSummary("Melanie Stryder refuses to fade away. The earth has been invaded by a species that take over the minds of human hosts while leaving their bodies intact. Wanderer, the invading \"soul\" who has been given Melanie's body, didn't expect to find its former tenant refusing to relinquish possession of her mind.\n" +
                 "\n" +
                 "As Melanie fills Wanderer's thoughts with visions of Jared, a human who still lives in hiding, Wanderer begins to yearn for a man she's never met. Reluctant allies, Wanderer and Melanie set off to search for the man they both love.");
-        book28.setBlackAndWhite(true);
-        this.bookRepository.save(book28);
+        theHost.setBlackAndWhite(true);
+        this.bookRepository.save(theHost);
 
-        Novel book29 = new Novel();
-        book29.setTitle("Leaving Paradise");
-        book29.setAuthor(author13);
-        book29.setPages(303);
-        book29.setLanguage(Language.ENGLISH);
-        book29.setGenre(Genre.YOUNG_ADULT);
-        book29.setYear(DateUtility.toInstant("2007-04-08"));
-        book29.setRating(4.01f);
-        book29.setImage("https://images.gr-assets.com/books/1388207436l/544424.jpg");
-        book29.setSeries(true);
-        book29.setSummary("Nothing has been the same since Caleb Becker left a party drunk, got behind the wheel, and hit Maggie Armstrong. Even after months of painful physical therapy, Maggie walks with a limp. Her social life is nil and a scholarship to study abroad—her chance to escape everyone and their pitying stares—has been canceled.\n" +
+        Novel leavingParadise = new Novel();
+        leavingParadise.setTitle("Leaving Paradise");
+        leavingParadise.setAuthor(simoneElkeles);
+        leavingParadise.setPages(303);
+        leavingParadise.setLanguage(Language.ENGLISH);
+        leavingParadise.setGenre(Genre.YOUNG_ADULT);
+        leavingParadise.setYear(DateUtility.toInstant("2007-04-08"));
+        leavingParadise.setRating(4.01f);
+        leavingParadise.setImage("https://images.gr-assets.com/books/1388207436l/544424.jpg");
+        leavingParadise.setSeries(true);
+        leavingParadise.setSummary("Nothing has been the same since Caleb Becker left a party drunk, got behind the wheel, and hit Maggie Armstrong. Even after months of painful physical therapy, Maggie walks with a limp. Her social life is nil and a scholarship to study abroad—her chance to escape everyone and their pitying stares—has been canceled.\n" +
                 "\n" +
                 "After a year in juvenile jail, Caleb’s free . . . if freedom means endless nagging from a transition coach and the prying eyes of the entire town. Coming home should feel good, but his family and ex-girlfriend seem like strangers.\n" +
                 "\n" +
                 "Caleb and Maggie are outsiders, pigeon-holed as \"criminal\" and \"freak.\" Then the truth emerges about what really happened the night of the accident and, once again, everything changes. It’s a bleak and tortuous journey for Caleb and Maggie, yet they end up finding comfort and strength from a surprising source: each other. ");
-        book29.setBlackAndWhite(true);
-        this.bookRepository.save(book29);
+        leavingParadise.setBlackAndWhite(true);
+        this.bookRepository.save(leavingParadise);
 
-        Novel book30 = new Novel();
-        book30.setTitle("Perfect Chemistry");
-        book30.setAuthor(author13);
-        book30.setPages(368);
-        book30.setLanguage(Language.ENGLISH);
-        book30.setGenre(Genre.ROMANCE);
-        book30.setYear(DateUtility.toInstant("2008-12-23"));
-        book30.setRating(4.07f);
-        book30.setImage("https://images.gr-assets.com/books/1439792475l/4268157.jpg");
-        book30.setSeries(true);
-        book30.setSummary("A fresh, urban twist on the classic tale of star-crossed lovers.\n" +
+        Novel perfectChemistry = new Novel();
+        perfectChemistry.setTitle("Perfect Chemistry");
+        perfectChemistry.setAuthor(simoneElkeles);
+        perfectChemistry.setPages(368);
+        perfectChemistry.setLanguage(Language.ENGLISH);
+        perfectChemistry.setGenre(Genre.ROMANCE);
+        perfectChemistry.setYear(DateUtility.toInstant("2008-12-23"));
+        perfectChemistry.setRating(4.07f);
+        perfectChemistry.setImage("https://images.gr-assets.com/books/1439792475l/4268157.jpg");
+        perfectChemistry.setSeries(true);
+        perfectChemistry.setSummary("A fresh, urban twist on the classic tale of star-crossed lovers.\n" +
                 "\n" +
                 "When Brittany Ellis walks into chemistry class on the first day of senior year, she has no clue that her carefully created 'perfect' life is about to unravel before her eyes. She's forced to be lab partners with Alex Fuentes, a gang member from the other side of town, and he is about to threaten everything she's worked so hard for: her flawless reputation, her relationship with her boyfriend, and the secret that her home life is anything but perfect. \n" +
                 "\n" +
                 "Alex is a bad boy and he knows it. So when he makes a bet with his friends to lure Brittany into his life, he thinks nothing of it. But soon Alex realizes Brittany is a real person with real problems, and suddenly the bet he made in arrogance turns into something much more.");
-        book30.setBlackAndWhite(true);
-        this.bookRepository.save(book30);
+        perfectChemistry.setBlackAndWhite(true);
+        this.bookRepository.save(perfectChemistry);
 
 
        User user1 = new User("mariya_ivanova", "Mariya", "Ivanova", "password", "mariya_ivanova@abv.bg", Role.WRITER);
@@ -666,51 +550,50 @@ public class DatabaseInitializer implements ApplicationRunner {
        User user3 = new User("lubomir92", "Lubomir", "Petrov", "password", "lubomir@abv.bg", Role.WRITER);
        User user4 = new User("kolev12", "Ivaylo", "Kolev", "password", "ivaylo.kolev@abv.bg", Role.WRITER);
 
-        Story story1 = new Story();
-        story1.setTitle("My first love");
-        story1.setLanguage(Language.BULGARIAN);
-        story1.setGenre(Genre.ROMANCE);
-        story1.setYear(DateUtility.toInstant("2013-10-25"));
-        story1.setRating(2.9f);
-        story1.setImage("https://images-na.ssl-images-amazon.com/images/I/51vk-4Grp0L._SX322_BO1,204,203,200_.jpg");
-        this.storyRepository.save(story1);
+        Story myFirstLove = new Story();
+        myFirstLove.setTitle("My first love");
+        myFirstLove.setLanguage(Language.BULGARIAN);
+        myFirstLove.setGenre(Genre.ROMANCE);
+        myFirstLove.setYear(DateUtility.toInstant("2013-10-25"));
+        myFirstLove.setRating(2.9f);
+        myFirstLove.setImage("https://images-na.ssl-images-amazon.com/images/I/51vk-4Grp0L._SX322_BO1,204,203,200_.jpg");
+        this.storyRepository.save(myFirstLove);
 
-        Story story2 = new Story();
-        story2.setTitle("Monster");
-        story2.setLanguage(Language.ENGLISH);
-        story2.setGenre(Genre.HORROR);
-        story2.setYear(DateUtility.toInstant("2017-12-03"));
-        story2.setRating(4.8f);
-        story2.setImage("https://10deb7fbfece20ff53da-95da5b03499e7e5b086c55c243f676a1.ssl.cf1.rackcdn.com/e03cdd76e869f63a3aa1ed88c9cc1ecd_xl.jpg");
+        Story monster = new Story();
+        monster.setTitle("Monster");
+        monster.setLanguage(Language.ENGLISH);
+        monster.setGenre(Genre.HORROR);
+        monster.setYear(DateUtility.toInstant("2017-12-03"));
+        monster.setRating(4.8f);
+        monster.setImage("https://10deb7fbfece20ff53da-95da5b03499e7e5b086c55c243f676a1.ssl.cf1.rackcdn.com/e03cdd76e869f63a3aa1ed88c9cc1ecd_xl.jpg");
+        this.storyRepository.save(monster);
 
-        this.storyRepository.save(story2);
+        Story bone = new Story();
+        bone.setTitle("Bone");
+        bone.setLanguage(Language.SPANISH);
+        bone.setGenre(Genre.SCIENCE);
+        bone.setYear(DateUtility.toInstant("2010-08-06"));
+        bone.setRating(2.8f);
+        bone.setImage("https://www.scholastic.com/bone/images/h_book_left1_review.gif");
+        this.storyRepository.save(bone);
 
-        Story story3 = new Story();
-        story3.setTitle("Bone");
-        story3.setLanguage(Language.SPANISH);
-        story3.setGenre(Genre.SCIENCE);
-        story3.setYear(DateUtility.toInstant("2010-08-06"));
-        story3.setRating(2.8f);
-        story3.setImage("https://www.scholastic.com/bone/images/h_book_left1_review.gif");
-        this.storyRepository.save(story3);
+        Story dangerousGames = new Story();
+        dangerousGames.setTitle("Dangerous games");
+        dangerousGames.setLanguage(Language.GERMAN);
+        dangerousGames.setGenre(Genre.FANTASY);
+        dangerousGames.setYear(DateUtility.toInstant("2016-04-02"));
+        dangerousGames.setRating(4.2f);
+        dangerousGames.setImage("https://drlauratisdall.files.wordpress.com/2015/06/9780520284920.jpg");
+        this.storyRepository.save(dangerousGames);
 
-        Story story4 = new Story();
-        story4.setTitle("Dangerous games");
-        story4.setLanguage(Language.GERMAN);
-        story4.setGenre(Genre.FANTASY);
-        story4.setYear(DateUtility.toInstant("2016-04-02"));
-        story4.setRating(4.2f);
-        story4.setImage("https://drlauratisdall.files.wordpress.com/2015/06/9780520284920.jpg");
-        this.storyRepository.save(story4);
-
-        Story story5 = new Story();
-        story5.setTitle("I am watching you");
-        story5.setLanguage(Language.ENGLISH);
-        story5.setGenre(Genre.ROMANCE);
-        story5.setYear(DateUtility.toInstant("2009-09-09"));
-        story5.setRating(3.8f);
-        story5.setImage("https://images.gr-assets.com/books/1500655149l/34879754.jpg");
-        this.storyRepository.save(story5);
+        Story iAmWatchingYou = new Story();
+        iAmWatchingYou.setTitle("I am watching you");
+        iAmWatchingYou.setLanguage(Language.ENGLISH);
+        iAmWatchingYou.setGenre(Genre.ROMANCE);
+        iAmWatchingYou.setYear(DateUtility.toInstant("2009-09-09"));
+        iAmWatchingYou.setRating(3.8f);
+        iAmWatchingYou.setImage("https://images.gr-assets.com/books/1500655149l/34879754.jpg");
+        this.storyRepository.save(iAmWatchingYou);
 
     }
 }
