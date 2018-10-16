@@ -44,8 +44,8 @@ public class DatabaseInitializer implements ApplicationRunner {
         Author johnGreen = new Author("John", "Green", "", DateUtility.toInstant("1977-08-24"), Nationality.AMERICAN, Genre.YOUNG_ADULT);
         this.authorRepository.save(johnGreen);
 
-        Author jennferArmentrout = new Author("Jennifer", "Armentrout", "J. Lynn", DateUtility.toInstant("1980-06-11"), Nationality.AMERICAN, Genre.FANTASY);
-        this.authorRepository.save(jennferArmentrout);
+        Author jenniferArmentrout = new Author("Jennifer", "Armentrout", "J. Lynn", DateUtility.toInstant("1980-06-11"), Nationality.AMERICAN, Genre.FANTASY);
+        this.authorRepository.save(jenniferArmentrout);
 
         Author suzanneCollins = new Author("Suzanne", "Collins", "", DateUtility.toInstant("1962-08-10"), Nationality.AMERICAN, Genre.SCIENCE_FICTION );
         this.authorRepository.save(suzanneCollins);
@@ -99,99 +99,48 @@ public class DatabaseInitializer implements ApplicationRunner {
                                         3.86f, heleneDunbar, 288, true, false, "In less than a second... two of the things Cal Ryan cares most about—a promising baseball career and Lizzie, one of his best friends—are gone forever. In the hours that follow ... Cal's damaged heart is replaced. But his life will never be the same. Everyone expects him to pick up the pieces and move on. But Lizzie is gone, and all that remains for Cal is an overwhelming sense that her death was his fault. And a voice in his head that just . . . won't . . . stop. Cal thought he and his friends could overcome any obstacle. But grief might be the one exception. And that might take a lifetime to accept . . . " );
         this.bookRepository.save(whatRemains);
 
-        //TODO fix name and whole constructor
-        Novel theeseGentleWounds = new Novel();
-        theeseGentleWounds.setTitle("These Gentle Wounds");
-        theeseGentleWounds.setAuthor(heleneDunbar);
-        theeseGentleWounds.setPages(307);
-        theeseGentleWounds.setLanguage(Language.ENGLISH);
-        theeseGentleWounds.setGenre(Genre.YOUNG_ADULT);
-        theeseGentleWounds.setYear(DateUtility.toInstant("2015-05-08"));
-        theeseGentleWounds.setRating(4.05f);
-        theeseGentleWounds.setImage("https://images.gr-assets.com/books/1379606879l/18187029.jpg");
-        theeseGentleWounds.setSeries(false);
-        theeseGentleWounds.setSummary("Sometimes I wish I’d lost a leg or something. Everyone can understand that. They never get it when what’s been broken is inside your head.\n" +
+        Novel theseGentleWounds = new Novel("These Gentle Wounds", DateUtility.toInstant("2014-03-08"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1423498110l/24890845.jpg",
+                4.05f, heleneDunbar, 307, true, false, "Sometimes I wish I’d lost a leg or something. Everyone can understand that. They never get it when what’s been broken is inside your head.\n" +
                 "\n" +
                 "Five years after an unspeakable tragedy that changed him forever, Gordie Allen has made a new home with his half-brother Kevin. Their arrangement works since Kevin is the only person who can protect Gordie at school and keep him focused on getting his life back on track. \n" +
                 "\n" +
                 "But just when it seems like things are becoming normal, Gordie’s biological father comes back into the picture, demanding a place in his life. Now there’s nothing to stop Gordie from falling into a tailspin that could cost him everything—including his relationship with Sarah, the first girl he’s trusted with the truth. With his world spinning out of control, the only one who can help Gordie is himself . . . if he can find the strength to confront the past and take back his future.");
-        theeseGentleWounds.setBlackAndWhite(true);
-        this.bookRepository.save(theeseGentleWounds);
+        this.bookRepository.save(theseGentleWounds);
 
-        Novel lookingForAlaska = new Novel();
-        lookingForAlaska.setTitle("Looking for Alaska");
-        lookingForAlaska.setAuthor(johnGreen);
-        lookingForAlaska.setPages(221);
-        lookingForAlaska.setLanguage(Language.ENGLISH);
-        lookingForAlaska.setGenre(Genre.YOUNG_ADULT);
-        lookingForAlaska.setYear(DateUtility.toInstant("2006-12-28"));
-        lookingForAlaska.setRating(4.07f);
-        lookingForAlaska.setImage("https://images.gr-assets.com/books/1423498110l/24890845.jpg");
-        lookingForAlaska.setSeries(false);
-        lookingForAlaska.setSummary("Before. Miles “Pudge” Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave “the Great Perhaps” even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then. . . . \n" +
+        Novel lookingForAlaska = new Novel("Looking for Alaska", DateUtility.toInstant("2006-12-28"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1423498110l/24890845.jpg",
+                4.07f, johnGreen, 221, true, false, "Before. Miles “Pudge” Halter is done with his safe life at home. His whole life has been one big non-event, and his obsession with famous last words has only made him crave “the Great Perhaps” even more (Francois Rabelais, poet). He heads off to the sometimes crazy and anything-but-boring world of Culver Creek Boarding School, and his life becomes the opposite of safe. Because down the hall is Alaska Young. The gorgeous, clever, funny, sexy, self-destructive, screwed up, and utterly fascinating Alaska Young. She is an event unto herself. She pulls Pudge into her world, launches him into the Great Perhaps, and steals his heart. Then. . . . \n" +
                 "After. Nothing is ever the same.");
-        lookingForAlaska.setBlackAndWhite(true);
         this.bookRepository.save(lookingForAlaska);
 
-        Novel theFaultInOurStars = new Novel();
-        theFaultInOurStars.setTitle("The Fault in Our Stars");
-        theFaultInOurStars.setAuthor(johnGreen);
-        theFaultInOurStars.setPages(313);
-        theFaultInOurStars.setLanguage(Language.ENGLISH);
-        theFaultInOurStars.setGenre(Genre.YOUNG_ADULT);
-        theFaultInOurStars.setYear(DateUtility.toInstant("2012-01-10"));
-        theFaultInOurStars.setRating(4.24f);
-        theFaultInOurStars.setImage("https://images.gr-assets.com/books/1360206420l/11870085.jpg");
-        theFaultInOurStars.setSeries(false);
-        theFaultInOurStars.setSummary("Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.\n" +
+        Novel theFaultInOurStars = new Novel("The Fault in Our Stars", DateUtility.toInstant("2012-01-10"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1360206420l/11870085.jpg",
+                4.24f, johnGreen, 313, true, false, "Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.\n" +
                 "\n" +
                 "Insightful, bold, irreverent, and raw, The Fault in Our Stars is award-winning author John Green's most ambitious and heartbreaking work yet, brilliantly exploring the funny, thrilling, and tragic business of being alive and in love.");
-        theFaultInOurStars.setBlackAndWhite(true);
         this.bookRepository.save(theFaultInOurStars);
 
-        Novel paperTowns = new Novel();
-        paperTowns.setTitle("Paper Towns");
-        paperTowns.setAuthor(johnGreen);
-        paperTowns.setPages(305);
-        paperTowns.setLanguage(Language.ENGLISH);
-        paperTowns.setGenre(Genre.YOUNG_ADULT);
-        paperTowns.setYear(DateUtility.toInstant("2009-09-22"));
-        paperTowns.setRating(3.86f);
-        paperTowns.setImage("https://images.gr-assets.com/books/1349013610l/6442769.jpg");
-        paperTowns.setSeries(false);
-        paperTowns.setSummary("Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew...");
-        paperTowns.setBlackAndWhite(true);
+        Novel paperTowns = new Novel("Paper Towns", DateUtility.toInstant("2009-09-22"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1349013610l/6442769.jpg",
+                3.86f, johnGreen, 305, true, false, "Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew...");
         this.bookRepository.save(paperTowns);
 
-        Novel onyx = new Novel();
-        onyx.setTitle("Onyx");
-        onyx.setAuthor(jennferArmentrout);
-        onyx.setPages(366);
-        onyx.setLanguage(Language.ENGLISH);
-        onyx.setGenre(Genre.FANTASY);
-        onyx.setYear(DateUtility.toInstant("2012-08-14"));
-        onyx.setRating(4.32f);
-        onyx.setImage("https://images.gr-assets.com/books/1329408511l/13047090.jpg");
-        onyx.setSeries(true);
-        onyx.setSummary("Being connected to Daemon Black sucks…\n" +
-                "\n" +
-                "Thanks to his alien mojo, Daemon’s determined to prove what he feels for me is more than a product of our bizarro connection. So I’ve sworn him off, even though he’s running more hot than cold these days. But we’ve got bigger problems.\n" +
-                "\n" +
-                "Something worse than the Arum has come to town…\n" +
-                "\n" +
-                "The Department of Defense are here. If they ever find out what Daemon can do and that we're linked, I’m a goner. So is he. And there's this new boy in school who’s got a secret of his own. He knows what’s happened to me and he can help, but to do so, I have to lie to Daemon and stay away from him. Like that's possible. Against all common sense, I'm falling for Daemon. Hard.\n" +
-                "\n" +
-                "But then everything changes…\n" +
-                "\n" +
-                "I’ve seen someone who shouldn’t be alive. And I have to tell Daemon, even though I know he’s never going to stop searching until he gets the truth. What happened to his brother? Who betrayed him? And what does the DOD want from them—from me?\n" +
-                "\n" +
-                "No one is who they seem. And not everyone will survive the lies…");
-        onyx.setBlackAndWhite(true);
+        Novel onyx = new Novel("Onyx", DateUtility.toInstant("2012-08-14"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1329408511l/13047090.jpg",
+                4.32f, jenniferArmentrout, 366, true, true, "Being connected to Daemon Black sucks…\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Thanks to his alien mojo, Daemon’s determined to prove what he feels for me is more than a product of our bizarro connection. So I’ve sworn him off, even though he’s running more hot than cold these days. But we’ve got bigger problems.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Something worse than the Arum has come to town…\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"The Department of Defense are here. If they ever find out what Daemon can do and that we're linked, I’m a goner. So is he. And there's this new boy in school who’s got a secret of his own. He knows what’s happened to me and he can help, but to do so, I have to lie to Daemon and stay away from him. Like that's possible. Against all common sense, I'm falling for Daemon. Hard.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"But then everything changes…\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"I’ve seen someone who shouldn’t be alive. And I have to tell Daemon, even though I know he’s never going to stop searching until he gets the truth. What happened to his brother? Who betrayed him? And what does the DOD want from them—from me?\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"No one is who they seem. And not everyone will survive the lies…");
         this.bookRepository.save(onyx);
 
         Novel obsidian = new Novel();
-        obsidian.setTitle("Obsidian");
-        obsidian.setAuthor(jennferArmentrout);
+        obsidian.setTitle("");
+        obsidian.setAuthor(jenniferArmentrout);
         obsidian.setPages(335);
         obsidian.setLanguage(Language.ENGLISH);
         obsidian.setGenre(Genre.FANTASY);
@@ -411,76 +360,27 @@ public class DatabaseInitializer implements ApplicationRunner {
         theEyeOfMinds.setBlackAndWhite(true);
         this.bookRepository.save(theEyeOfMinds);
 
-        Novel theJournalOfCuriousLetters = new Novel();
-        theJournalOfCuriousLetters.setTitle("The Journal of Curious Letters");
-        theJournalOfCuriousLetters.setAuthor(jamesDasher);
-        theJournalOfCuriousLetters.setPages(432);
-        theJournalOfCuriousLetters.setLanguage(Language.ENGLISH);
-        theJournalOfCuriousLetters.setGenre(Genre.FANTASY);
-        theJournalOfCuriousLetters.setYear(DateUtility.toInstant("2008-03-03"));
-        theJournalOfCuriousLetters.setRating(3.93f);
-        theJournalOfCuriousLetters.setImage("https://images.gr-assets.com/books/1414559824l/2219694.jpg");
-        theJournalOfCuriousLetters.setSeries(true);
-        theJournalOfCuriousLetters.setSummary("What if every time you made a choice that had a significant consequence, a new, alternate reality was created--the life that would've been had you made the other choice? What if those new realities were in danger? What if it fell to you to save all the realities? Atticus Higginbottom, a.k.a. Tick, is an average thirteen-year-old boy until the day a strange letter arrives in his mailbox. Postmarked from Alaska and cryptically signed with the initials \"M.G.,\" the letter informs Tick that dangerous--perhaps even deadly--events have been set in motion that could result in the destruction of reality itself. M.G. promises to send Tick twelve riddles that will reveal on a certain day, at a certain time, at a certain place, something extraordinary will happen. Will Tick have the courage to follow the twelve clues M.G. sends to him? Will he be able to solve the riddles in time? Will Tick discover the life he was meant to live? The first volume of an outstanding new children's fantasy series, The Journal of Curious Letters is filled with adventure, humor, riddles, and, oh, yes--danger... As M.G. warns Tick, Very frightening things are coming your way. Will you join Tick and his friends on an amazing journey through the Realities? What will your choice be?");
-        theJournalOfCuriousLetters.setBlackAndWhite(true);
+        Novel theJournalOfCuriousLetters = new Novel("The Journal of Curious Letters", DateUtility.toInstant("2008-03-03"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1414559824l/2219694.jpg",
+                3.93f, jamesDasher, 432, true, true, "What if every time you made a choice that had a significant consequence, a new, alternate reality was created--the life that would've been had you made the other choice? What if those new realities were in danger? What if it fell to you to save all the realities? Atticus Higginbottom, a.k.a. Tick, is an average thirteen-year-old boy until the day a strange letter arrives in his mailbox. Postmarked from Alaska and cryptically signed with the initials \"M.G.,\" the letter informs Tick that dangerous--perhaps even deadly--events have been set in motion that could result in the destruction of reality itself. M.G. promises to send Tick twelve riddles that will reveal on a certain day, at a certain time, at a certain place, something extraordinary will happen. Will Tick have the courage to follow the twelve clues M.G. sends to him? Will he be able to solve the riddles in time? Will Tick discover the life he was meant to live? The first volume of an outstanding new children's fantasy series, The Journal of Curious Letters is filled with adventure, humor, riddles, and, oh, yes--danger... As M.G. warns Tick, Very frightening things are coming your way. Will you join Tick and his friends on an amazing journey through the Realities? What will your choice be?");
         this.bookRepository.save(theJournalOfCuriousLetters);
 
-        Novel theNotebook = new Novel();
-        theNotebook.setTitle("The Notebook");
-        theNotebook.setAuthor(nicholasSparks);
-        theNotebook.setPages(227);
-        theNotebook.setLanguage(Language.ENGLISH);
-        theNotebook.setGenre(Genre.ROMANCE);
-        theNotebook.setYear(DateUtility.toInstant("1996-10-01"));
-        theNotebook.setRating(4.07f);
-        theNotebook.setImage("https://images.gr-assets.com/books/1483183484l/33648131.jpg");
-        theNotebook.setSeries(true);
-        theNotebook.setSummary("Set amid the austere beauty of the North Carolina coast, The Notebook begins with the story of Noah Calhoun, a rural Southerner recently returned form the Second World War. Noah is restoring a plantation home to its former glory, and he is haunted by images of the beautiful girl he met fourteen years earlier, a girl he loved like no other. Unable to find her, yet unwilling to forget the summer they spent together, Noah is content to live with only memories...until she unexpectedly returns to his town to see him once again.\n" +
+        Novel theNotebook = new Novel("The Notebook", DateUtility.toInstant("1996-10-01"), Language.ENGLISH, Genre.ROMANCE, "https://images.gr-assets.com/books/1483183484l/33648131.jpg",
+                4.07f, nicholasSparks, 227, true, true, "Set amid the austere beauty of the North Carolina coast, The Notebook begins with the story of Noah Calhoun, a rural Southerner recently returned form the Second World War. Noah is restoring a plantation home to its former glory, and he is haunted by images of the beautiful girl he met fourteen years earlier, a girl he loved like no other. Unable to find her, yet unwilling to forget the summer they spent together, Noah is content to live with only memories...until she unexpectedly returns to his town to see him once again.\n" +
                 "\n" +
                 "Like a puzzle within a puzzle, the story of Noah and Allie is just the beginning. As it unfolds, their tale miraculously becomes something different, with much higher stakes. The result is a deeply moving portrait of love itself, the tender moments and the fundamental changes that affect us all. It is a story of miracles and emotions that will stay with you forever.");
-        theNotebook.setBlackAndWhite(true);
         this.bookRepository.save(theNotebook);
 
-        Novel theGuardian = new Novel();
-        theGuardian.setTitle("The Guardian");
-        theGuardian.setAuthor(nicholasSparks);
-        theGuardian.setPages(400);
-        theGuardian.setLanguage(Language.ENGLISH);
-        theGuardian.setGenre(Genre.ROMANCE);
-        theGuardian.setYear(DateUtility.toInstant("2005-04-01"));
-        theGuardian.setRating(4.15f);
-        theGuardian.setImage("https://images.gr-assets.com/books/1388195339l/15925.jpg");
-        theGuardian.setSeries(false);
-        theGuardian.setSummary("Julie Barenson's young husband left her two unexpected gifts before he died: a Great Dane puppy named Singer and the promise that he would always be watching over her. Now, four years have passed. Still living in the small town of Swansboro, North Carolina, 29-year-old Julie is emotionally ready to make a commitment to someone again. But who? Should it be Richard Franklin, the handsome, sophisticated engineer who treats her like a queen? Or Mike Harris, the down-to-earth nice guy who was her husband's best friend? Choosing one of them should bring her more happiness than she's had in years. Instead, Julie is soon fighting for her life in a nightmare spawned by a chilling deception and jealousy so poisonous that it has become a murderous desire.");
-        theGuardian.setBlackAndWhite(true);
+        Novel theGuardian = new Novel("The Guardian", DateUtility.toInstant("2005-04-01"), Language.ENGLISH, Genre.ROMANCE, "https://images.gr-assets.com/books/1388195339l/15925.jpg",
+                4.15f, nicholasSparks, 400, true, false, "Julie Barenson's young husband left her two unexpected gifts before he died: a Great Dane puppy named Singer and the promise that he would always be watching over her. Now, four years have passed. Still living in the small town of Swansboro, North Carolina, 29-year-old Julie is emotionally ready to make a commitment to someone again. But who? Should it be Richard Franklin, the handsome, sophisticated engineer who treats her like a queen? Or Mike Harris, the down-to-earth nice guy who was her husband's best friend? Choosing one of them should bring her more happiness than she's had in years. Instead, Julie is soon fighting for her life in a nightmare spawned by a chilling deception and jealousy so poisonous that it has become a murderous desire.");
         this.bookRepository.save(theGuardian);
 
-        Novel aWalkToRemember = new Novel();
-        aWalkToRemember.setTitle("A Walk to Remember");
-        aWalkToRemember.setAuthor(nicholasSparks);
-        aWalkToRemember.setPages(215);
-        aWalkToRemember.setLanguage(Language.ENGLISH);
-        aWalkToRemember.setGenre(Genre.ROMANCE);
-        aWalkToRemember.setYear(DateUtility.toInstant("2000-05-24"));
-        aWalkToRemember.setRating(4.165f);
-        aWalkToRemember.setImage("https://images.gr-assets.com/books/1498755310l/35545737.jpg");
-        aWalkToRemember.setSeries(false);
-        aWalkToRemember.setSummary("There was a time when the world was sweeter...when the women in Beaufort, North Carolina, wore dresses, and the men donned hats...when something happened to a seventeen-year-old boy that would change his life forever. Every April, when the wind blows in from the sea and mingles with the scent of lilacs, Landon Carter remembers his last year at Beaufort High. It was 1958, and Landon had already dated a girl or two. He even swore that he had once been in love. Certainly the last person in town he thought he'd fall for was Jamie Sullivan, the daughter of the town's Baptist minister. A quiet girl who always carried a Bible with her schoolbooks, Jamie seemed content living in a world apart from the other teens. She took care of her widowed father, rescued hurt animals, and helped out at the local orphanage. No boy had ever asked her out. Landon would never have dreamed of it. Then a twist of fate made Jamie his partner for the homecoming dance, and Landon Carter's life would never be the same. Being with Jamie would show him the depths of the human heart and lead him to a decision so stunning it would send him irrevocably on the road to manhood. No other author today touches our emotions more deeply than Nicholas Sparks.\n" +
+        Novel aWalkToRemember = new Novel("A Walk to Remember", DateUtility.toInstant("2000-05-24"), Language.ENGLISH, Genre.ROMANCE, "https://images.gr-assets.com/books/1498755310l/35545737.jpg",
+                4.15f, nicholasSparks, 215, true, false, "There was a time when the world was sweeter...when the women in Beaufort, North Carolina, wore dresses, and the men donned hats...when something happened to a seventeen-year-old boy that would change his life forever. Every April, when the wind blows in from the sea and mingles with the scent of lilacs, Landon Carter remembers his last year at Beaufort High. It was 1958, and Landon had already dated a girl or two. He even swore that he had once been in love. Certainly the last person in town he thought he'd fall for was Jamie Sullivan, the daughter of the town's Baptist minister. A quiet girl who always carried a Bible with her schoolbooks, Jamie seemed content living in a world apart from the other teens. She took care of her widowed father, rescued hurt animals, and helped out at the local orphanage. No boy had ever asked her out. Landon would never have dreamed of it. Then a twist of fate made Jamie his partner for the homecoming dance, and Landon Carter's life would never be the same. Being with Jamie would show him the depths of the human heart and lead him to a decision so stunning it would send him irrevocably on the road to manhood. No other author today touches our emotions more deeply than Nicholas Sparks.\n" +
                 "Illuminating both the strength and the gossamer fragility of our deepest emotions, his two New York Times bestsellers, The Notebook and Message in a Bottle, have established him as the leading author of today's most cherished love stories. Now, in A Walk to Remember, he tells a truly unforgettable story, one that glimmers with all of his magic, holding us spellbound-and reminding us that in life each of us may find one great love, the kind that changes everything... ");
-        aWalkToRemember.setBlackAndWhite(true);
         this.bookRepository.save(aWalkToRemember);
 
-        Novel twilight = new Novel();
-        twilight.setTitle("Twilight");
-        twilight.setAuthor(stephenieMeyer);
-        twilight.setPages(498);
-        twilight.setLanguage(Language.ENGLISH);
-        twilight.setGenre(Genre.FANTASY);
-        twilight.setYear(DateUtility.toInstant("2005-10-05"));
-        twilight.setRating(3.58f);
-        twilight.setImage("https://images.gr-assets.com/books/1361039443l/41865.jpg");
-        twilight.setSeries(true);
-        twilight.setSummary("About three things I was absolutely positive.\n" +
+        Novel twilight = new Novel("Twilight", DateUtility.toInstant("2005-10-05"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1361039443l/41865.jpg",
+                3.58f, stephenieMeyer, 498, true, true, "About three things I was absolutely positive.\n" +
                 "\n" +
                 "First, Edward was a vampire.\n" +
                 "\n" +
@@ -489,59 +389,28 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "And third, I was unconditionally and irrevocably in love with him.\n" +
                 "\n" +
                 "In the first book of the Twilight Saga, internationally bestselling author Stephenie Meyer introduces Bella Swan and Edward Cullen, a pair of star-crossed lovers whose forbidden relationship ripens against the backdrop of small-town suspicion and a mysterious coven of vampires. This is a love story with bite.");
-        twilight.setBlackAndWhite(true);
         this.bookRepository.save(twilight);
 
-        Novel theHost = new Novel();
-        theHost.setTitle("The Host");
-        theHost.setAuthor(stephenieMeyer);
-        theHost.setPages(620);
-        theHost.setLanguage(Language.ENGLISH);
-        theHost.setGenre(Genre.SCIENCE_FICTION);
-        theHost.setYear(DateUtility.toInstant("2008-05-06"));
-        theHost.setRating(3.84f);
-        theHost.setImage("https://images.gr-assets.com/books/1318009171l/1656001.jpg");
-        theHost.setSeries(true);
-        theHost.setSummary("Melanie Stryder refuses to fade away. The earth has been invaded by a species that take over the minds of human hosts while leaving their bodies intact. Wanderer, the invading \"soul\" who has been given Melanie's body, didn't expect to find its former tenant refusing to relinquish possession of her mind.\n" +
-                "\n" +
-                "As Melanie fills Wanderer's thoughts with visions of Jared, a human who still lives in hiding, Wanderer begins to yearn for a man she's never met. Reluctant allies, Wanderer and Melanie set off to search for the man they both love.");
-        theHost.setBlackAndWhite(true);
+        Novel theHost = new Novel("The Host", DateUtility.toInstant("2008-05-06"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1318009171l/1656001.jpg",
+                3.84f, stephenieMeyer, 620, true, true, "Melanie Stryder refuses to fade away. The earth has been invaded by a species that take over the minds of human hosts while leaving their bodies intact. Wanderer, the invading \\\"soul\\\" who has been given Melanie's body, didn't expect to find its former tenant refusing to relinquish possession of her mind.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"As Melanie fills Wanderer's thoughts with visions of Jared, a human who still lives in hiding, Wanderer begins to yearn for a man she's never met. Reluctant allies, Wanderer and Melanie set off to search for the man they both love.");
         this.bookRepository.save(theHost);
 
-        Novel leavingParadise = new Novel();
-        leavingParadise.setTitle("Leaving Paradise");
-        leavingParadise.setAuthor(simoneElkeles);
-        leavingParadise.setPages(303);
-        leavingParadise.setLanguage(Language.ENGLISH);
-        leavingParadise.setGenre(Genre.YOUNG_ADULT);
-        leavingParadise.setYear(DateUtility.toInstant("2007-04-08"));
-        leavingParadise.setRating(4.01f);
-        leavingParadise.setImage("https://images.gr-assets.com/books/1388207436l/544424.jpg");
-        leavingParadise.setSeries(true);
-        leavingParadise.setSummary("Nothing has been the same since Caleb Becker left a party drunk, got behind the wheel, and hit Maggie Armstrong. Even after months of painful physical therapy, Maggie walks with a limp. Her social life is nil and a scholarship to study abroad—her chance to escape everyone and their pitying stares—has been canceled.\n" +
+        Novel leavingParadise = new Novel("Leaving Paradise", DateUtility.toInstant("2007-04-08"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1388207436l/544424.jpg",
+                4.01f, simoneElkeles, 303, true, true, "Nothing has been the same since Caleb Becker left a party drunk, got behind the wheel, and hit Maggie Armstrong. Even after months of painful physical therapy, Maggie walks with a limp. Her social life is nil and a scholarship to study abroad—her chance to escape everyone and their pitying stares—has been canceled.\n" +
                 "\n" +
                 "After a year in juvenile jail, Caleb’s free . . . if freedom means endless nagging from a transition coach and the prying eyes of the entire town. Coming home should feel good, but his family and ex-girlfriend seem like strangers.\n" +
                 "\n" +
                 "Caleb and Maggie are outsiders, pigeon-holed as \"criminal\" and \"freak.\" Then the truth emerges about what really happened the night of the accident and, once again, everything changes. It’s a bleak and tortuous journey for Caleb and Maggie, yet they end up finding comfort and strength from a surprising source: each other. ");
-        leavingParadise.setBlackAndWhite(true);
         this.bookRepository.save(leavingParadise);
 
-        Novel perfectChemistry = new Novel();
-        perfectChemistry.setTitle("Perfect Chemistry");
-        perfectChemistry.setAuthor(simoneElkeles);
-        perfectChemistry.setPages(368);
-        perfectChemistry.setLanguage(Language.ENGLISH);
-        perfectChemistry.setGenre(Genre.ROMANCE);
-        perfectChemistry.setYear(DateUtility.toInstant("2008-12-23"));
-        perfectChemistry.setRating(4.07f);
-        perfectChemistry.setImage("https://images.gr-assets.com/books/1439792475l/4268157.jpg");
-        perfectChemistry.setSeries(true);
-        perfectChemistry.setSummary("A fresh, urban twist on the classic tale of star-crossed lovers.\n" +
+        Novel perfectChemistry = new Novel("Perfect Chemistry", DateUtility.toInstant("2008-12-23"), Language.ENGLISH, Genre.ROMANCE, "https://images.gr-assets.com/books/1439792475l/4268157.jpg",
+                4.07f, simoneElkeles,368, true, true, "A fresh, urban twist on the classic tale of star-crossed lovers.\n" +
                 "\n" +
                 "When Brittany Ellis walks into chemistry class on the first day of senior year, she has no clue that her carefully created 'perfect' life is about to unravel before her eyes. She's forced to be lab partners with Alex Fuentes, a gang member from the other side of town, and he is about to threaten everything she's worked so hard for: her flawless reputation, her relationship with her boyfriend, and the secret that her home life is anything but perfect. \n" +
                 "\n" +
                 "Alex is a bad boy and he knows it. So when he makes a bet with his friends to lure Brittany into his life, he thinks nothing of it. But soon Alex realizes Brittany is a real person with real problems, and suddenly the bet he made in arrogance turns into something much more.");
-        perfectChemistry.setBlackAndWhite(true);
         this.bookRepository.save(perfectChemistry);
 
 
@@ -550,49 +419,24 @@ public class DatabaseInitializer implements ApplicationRunner {
        User user3 = new User("lubomir92", "Lubomir", "Petrov", "password", "lubomir@abv.bg", Role.WRITER);
        User user4 = new User("kolev12", "Ivaylo", "Kolev", "password", "ivaylo.kolev@abv.bg", Role.WRITER);
 
-        Story myFirstLove = new Story();
-        myFirstLove.setTitle("My first love");
-        myFirstLove.setLanguage(Language.BULGARIAN);
-        myFirstLove.setGenre(Genre.ROMANCE);
-        myFirstLove.setYear(DateUtility.toInstant("2013-10-25"));
-        myFirstLove.setRating(2.9f);
-        myFirstLove.setImage("https://images-na.ssl-images-amazon.com/images/I/51vk-4Grp0L._SX322_BO1,204,203,200_.jpg");
+        Story myFirstLove = new Story("My first love", DateUtility.toInstant("2013-10-25"), Language.BULGARIAN, Genre.ROMANCE, "https://images-na.ssl-images-amazon.com/images/I/51vk-4Grp0L._SX322_BO1,204,203,200_.jpg",
+                2.9f, "", "");
         this.storyRepository.save(myFirstLove);
 
-        Story monster = new Story();
-        monster.setTitle("Monster");
-        monster.setLanguage(Language.ENGLISH);
-        monster.setGenre(Genre.HORROR);
-        monster.setYear(DateUtility.toInstant("2017-12-03"));
-        monster.setRating(4.8f);
-        monster.setImage("https://10deb7fbfece20ff53da-95da5b03499e7e5b086c55c243f676a1.ssl.cf1.rackcdn.com/e03cdd76e869f63a3aa1ed88c9cc1ecd_xl.jpg");
+        Story monster = new Story("Monster", DateUtility.toInstant("2017-12-03"), Language.ENGLISH, Genre.HORROR, "https://10deb7fbfece20ff53da-95da5b03499e7e5b086c55c243f676a1.ssl.cf1.rackcdn.com/e03cdd76e869f63a3aa1ed88c9cc1ecd_xl.jpg",
+                4.8f, "", "");
         this.storyRepository.save(monster);
 
-        Story bone = new Story();
-        bone.setTitle("Bone");
-        bone.setLanguage(Language.SPANISH);
-        bone.setGenre(Genre.SCIENCE);
-        bone.setYear(DateUtility.toInstant("2010-08-06"));
-        bone.setRating(2.8f);
-        bone.setImage("https://www.scholastic.com/bone/images/h_book_left1_review.gif");
+        Story bone = new Story("Bone", DateUtility.toInstant("2010-08-06"), Language.SPANISH, Genre.SCIENCE, "https://images.gr-assets.com/books/1500655149l/34879754.jpg",
+                2.8f, "", "");
         this.storyRepository.save(bone);
 
-        Story dangerousGames = new Story();
-        dangerousGames.setTitle("Dangerous games");
-        dangerousGames.setLanguage(Language.GERMAN);
-        dangerousGames.setGenre(Genre.FANTASY);
-        dangerousGames.setYear(DateUtility.toInstant("2016-04-02"));
-        dangerousGames.setRating(4.2f);
-        dangerousGames.setImage("https://drlauratisdall.files.wordpress.com/2015/06/9780520284920.jpg");
+        Story dangerousGames = new Story("Dangerous games",DateUtility.toInstant("2016-04-02"), Language.GERMAN, Genre.FANTASY, "https://drlauratisdall.files.wordpress.com/2015/06/9780520284920.jpg",
+                4.2f, "", "");
         this.storyRepository.save(dangerousGames);
 
-        Story iAmWatchingYou = new Story();
-        iAmWatchingYou.setTitle("I am watching you");
-        iAmWatchingYou.setLanguage(Language.ENGLISH);
-        iAmWatchingYou.setGenre(Genre.ROMANCE);
-        iAmWatchingYou.setYear(DateUtility.toInstant("2009-09-09"));
-        iAmWatchingYou.setRating(3.8f);
-        iAmWatchingYou.setImage("https://images.gr-assets.com/books/1500655149l/34879754.jpg");
+        Story iAmWatchingYou = new Story("I am watching you", DateUtility.toInstant("2009-09-09"), Language.ENGLISH, Genre.ROMANCE, "https://images.gr-assets.com/books/1500655149l/34879754.jpg",
+                3.8f, "", "");
         this.storyRepository.save(iAmWatchingYou);
 
     }

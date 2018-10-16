@@ -14,12 +14,13 @@ public class Story extends Read {
 
     private String text;
 
-    public Story(String title, long id, Instant year, Language language, Genre genre, String image, float rating, User user, String summary, String text) {
-        super(title, id, year, language, genre, image, rating);
-        this.user = user;
+    public Story(String title, Instant year, Language language, Genre genre, String image, float rating,/* User user,*/ String summary, String text) {
+        super(title, year, language, genre, image, rating);
+      //  this.user = user;
         this.summary = summary;
         this.text = text;
     }
+
 
     public Story() {
     }
@@ -30,4 +31,6 @@ public class Story extends Read {
                 ", Summary: " + this.summary +
                 ", " + user.getShortInfo() + '\n' ;
     }
+
+
 }
