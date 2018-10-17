@@ -32,7 +32,7 @@ public class DatabaseInitializer implements ApplicationRunner {
         Author stephenKing = new Author("Stephen", "King", "Richard Bachman", DateUtility.toInstant("1947-09-21"), Nationality.AMERICAN, Genre.HORROR);
         this.authorRepository.save(stephenKing);
 
-        Author roxaneGay = new Author("Roxane", "Gay", "", DateUtility.toInstant("1974-10-28"), Nationality.AMERICAN, Genre.MEMORY);
+        Author roxaneGay = new Author("Roxane", "Gay", "", DateUtility.toInstant("1974-10-15"), Nationality.AMERICAN, Genre.MEMORY);
         this.authorRepository.save(roxaneGay);
 
         Author alanMilne = new Author("Alan","Milne","A. A. Milne",DateUtility.toInstant("1882-01-18"),Nationality.ENGLISHMAN, Genre.CHILDBOOKS);
@@ -71,8 +71,8 @@ public class DatabaseInitializer implements ApplicationRunner {
 
 
 
-        Novel it = new Novel("It",DateUtility.toInstant("1986-09-15"), Language.ENGLISH, Genre.HORROR, "https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2017/04/It-Audiobook.jpg?w=402&h=565&ssl=1",
-                                4.5f, stephenKing, 1138, true, false, "Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers." );
+        Novel it = new Novel("It",DateUtility.toInstant("1987-10-01"), Language.ENGLISH, Genre.HORROR, "https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2017/04/It-Audiobook.jpg?w=402&h=565&ssl=1",
+                                4.5f, stephenKing, 1116, true, false, "Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers." );
         this.bookRepository.save(it);
 
         Novel doctorSleep = new Novel("Doctor Sleep", DateUtility.toInstant("2013-09-24"), Language.ENGLISH, Genre.HORROR, "https://images.gr-assets.com/books/1457473537l/18741301.jpg",
@@ -85,7 +85,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "Then Dan meets the evanescent Abra Stone, and it is her spectacular gift, the brightest shining ever seen, that reignites Dan's own demons and summons him to a battle for Abra's soul and survival. This is an epic war between good and evil, a gory, glorious story that will thrill the millions of hyper-devoted fans of The Shining and wildly satisfy anyone new to the territory of this icon in the King canon.");
         this.bookRepository.save(doctorSleep);
 
-        Novel hunger = new Novel("Hunger", DateUtility.toInstant("2017-06-13"), Language.ENGLISH, Genre.MYSTERY, "https://images.gr-assets.com/books/1449810298l/22813605.jpg",
+        Novel hunger = new Novel("Hunger", DateUtility.toInstant("2017-06-13"), Language.ENGLISH, Genre.MEMORY, "https://images.gr-assets.com/books/1449810298l/22813605.jpg",
                                     5f, roxaneGay, 320, true, false, "New York Times bestselling author Roxane Gay has written with intimacy and sensitivity about food and bodies, using her own emotional and psychological struggles as a means of exploring our shared anxieties over pleasure, consumption, appearance, and health. As a woman who describes her own body as “wildly undisciplined,” Roxane understands the tension between desire and denial, between self-comfort and self-care. In Hunger, she casts an insightful and critical eye on her childhood, teens, and twenties—including the devastating act of violence that acted as a turning point in her young life—and brings readers into the present and the realities, pains, and joys of her daily life.\n" +
                 "\n" +
                 "With the bracing candor, vulnerability, and authority that have made her one of the most admired voices of her generation, Roxane explores what it means to be overweight in a time when the bigger you are, the less you are seen. Hunger is a deeply personal memoir from one of our finest writers, and tells a story that hasn’t yet been told but needs to be.");
@@ -99,7 +99,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                                         3.86f, heleneDunbar, 288, true, false, "In less than a second... two of the things Cal Ryan cares most about—a promising baseball career and Lizzie, one of his best friends—are gone forever. In the hours that follow ... Cal's damaged heart is replaced. But his life will never be the same. Everyone expects him to pick up the pieces and move on. But Lizzie is gone, and all that remains for Cal is an overwhelming sense that her death was his fault. And a voice in his head that just . . . won't . . . stop. Cal thought he and his friends could overcome any obstacle. But grief might be the one exception. And that might take a lifetime to accept . . . " );
         this.bookRepository.save(whatRemains);
 
-        Novel theseGentleWounds = new Novel("These Gentle Wounds", DateUtility.toInstant("2014-03-08"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1423498110l/24890845.jpg",
+        Novel theseGentleWounds = new Novel("These Gentle Wounds", DateUtility.toInstant("2014-05-08"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1423498110l/24890845.jpg",
                 4.05f, heleneDunbar, 307, true, false, "Sometimes I wish I’d lost a leg or something. Everyone can understand that. They never get it when what’s been broken is inside your head.\n" +
                 "\n" +
                 "Five years after an unspeakable tragedy that changed him forever, Gordie Allen has made a new home with his half-brother Kevin. Their arrangement works since Kevin is the only person who can protect Gordie at school and keep him focused on getting his life back on track. \n" +
@@ -119,7 +119,8 @@ public class DatabaseInitializer implements ApplicationRunner {
         this.bookRepository.save(theFaultInOurStars);
 
         Novel paperTowns = new Novel("Paper Towns", DateUtility.toInstant("2009-09-22"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1349013610l/6442769.jpg",
-                3.86f, johnGreen, 305, true, false, "Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew...");
+                3.86f, johnGreen, 305, true, false, "Who is the real Margo?" + "\n" +
+                "Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs into his life—dressed like a ninja and summoning him for an ingenious campaign of revenge—he follows. After their all-nighter ends, and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues—and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees the girl he thought he knew...");
         this.bookRepository.save(paperTowns);
 
         Novel onyx = new Novel("Onyx", DateUtility.toInstant("2012-08-14"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1329408511l/13047090.jpg",
@@ -163,7 +164,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "                \"When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.");
         this.bookRepository.save(theHungerGames);
 
-        Novel catchingFire = new Novel("Catching Fire", DateUtility.toInstant("2009-09-01"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1358273780l/6148028.jpg",
+        Novel catchingFire = new Novel("Catching Fire", DateUtility.toInstant("2009-09-01"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1358273780l/6148028.jpg",
                 4.29f, suzanneCollins, 391, true, true, "Sparks are igniting.\\n\" +\n" +
                 "                \"Flames are spreading.\\n\" +\n" +
                 "                \"And the Capitol wants revenge.\\n\" +\n" +
@@ -175,7 +176,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "                \"In Catching Fire, the second novel in the Hunger Games trilogy, Suzanne Collins continues the story of Katniss Everdeen, testing her more than ever before...and surprising readers at every turn.");
         this.bookRepository.save(catchingFire);
 
-        Novel mockingjay = new Novel("Mockingjay", DateUtility.toInstant("2010-08-24"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1358275419l/7260188.jpg",
+        Novel mockingjay = new Novel("Mockingjay", DateUtility.toInstant("2010-08-24"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1358275419l/7260188.jpg",
                 4.03f, suzanneCollins, 392, true, true, "My name is Katniss Everdeen.\\n\" +\n" +
                 "                \"Why am I not dead?\\n\" +\n" +
                 "                \"I should be dead.\\n\" +\n" +
@@ -187,7 +188,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "                \"The success of the rebellion hinges on Katniss's willingness to be a pawn, to accept responsibility for countless lives, and to change the course of the future of Panem. To do this, she must put aside her feelings of anger and distrust. She must become the rebels' Mockingjay--no matter what the personal cost.");
         this.bookRepository.save(mockingjay);
 
-        Novel divergent = new Novel("Divergent", DateUtility.toInstant("2012-02-28"), Language.ENGLISH, Genre.FICTION, "https://images.gr-assets.com/books/1328559506l/13335037.jpg",
+        Novel divergent = new Novel("Divergent", DateUtility.toInstant("2012-02-28"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1328559506l/13335037.jpg",
                 4.22f, veronicaRoth, 487, true, true, "In Beatrice Prior's dystopian Chicago world, society is divided into five factions, each dedicated to the cultivation of a particular virtue—Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is—she can't have both. So she makes a choice that surprises everyone, including herself.\\n\" +\n" +
                 "                \"\\n\" +\n" +
                 "                \"During the highly competitive initiation that follows, Beatrice renames herself Tris and struggles alongside her fellow initiates to live out the choice they have made. Together they must undergo extreme physical tests of endurance and intense psychological simulations, some with devastating consequences. As initiation transforms them all, Tris must determine who her friends really are—and where, exactly, a romance with a sometimes fascinating, sometimes exasperating boy fits into the life she's chosen. But Tris also has a secret, one she's kept hidden from everyone because she's been warned it can mean death. And as she discovers unrest and growing conflict that threaten to unravel her seemingly perfect society, she also learns that her secret might help her save those she loves . . . or it might destroy her.");
@@ -201,7 +202,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "New York Times bestselling author Veronica Roth's much-anticipated second book of the dystopian DIVERGENT series is another intoxicating thrill ride of a story, rich with hallmark twists, heartbreaks, romance, and powerful insights about human nature.");
         this.bookRepository.save(insurgent);
 
-        Novel allegiant = new Novel("Allegiant", DateUtility.toInstant("2013-10-22"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1395582745l/18710190.jpg",
+        Novel allegiant = new Novel("Allegiant", DateUtility.toInstant("2013-10-22"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1395582745l/18710190.jpg",
                 3.63f, veronicaRoth, 526, true, true, "The faction-based society that Tris Prior once believed in is shattered - fractured by violence and power struggles and scarred by loss and betrayal. So when offered a chance to explore the world past the limits she's known, Tris is ready. Perhaps beyond the fence, she and Tobias will find a simple new life together, free from complicated lies, tangled loyalties, and painful memories.\n" +
                 "\n" +
                 "But Tris's new reality is even more alarming than the one she left behind. Old discoveries are quickly rendered meaningliess. Explosive new truths change the hearts of those she loves. And once again, Tris must battle to comprehend to complexities of human nature - and of herself - while facing impossible choices about courage, allegiance, sacrifice, and love.\n" +
@@ -237,7 +238,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "                \"Remember. Survive. Run.");
         this.bookRepository.save(theMazeRunner);
 
-        Novel theEyeOfMinds = new Novel("The Eye of Minds", DateUtility.toInstant("2013-09-27"), Language.ENGLISH,Genre.SCIENCE, "https://images.gr-assets.com/books/1358659346l/16279856.jpg",
+        Novel theEyeOfMinds = new Novel("The Eye of Minds", DateUtility.toInstant("2013-09-27"), Language.ENGLISH,Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1358659346l/16279856.jpg",
                 3.86f, jamesDasher, 308, true, true, "Michael is a gamer. And like most gamers, he almost spends more time on the VirtNet than in the actual world. The VirtNet offers total mind and body immersion, and it’s addictive. Thanks to technology, anyone with enough money can experience fantasy worlds, risk their life without the chance of death, or just hang around with Virt-friends. And the more hacking skills you have, the more fun. Why bother following the rules when most of them are dumb, anyway?\\n\" +\n" +
                 "                \"\\n\" +\n" +
                 "                \"But some rules were made for a reason. Some technology is too dangerous to fool with. And recent reports claim that one gamer is going beyond what any gamer has done before: he’s holding players hostage inside the VirtNet. The effects are horrific—the hostages have all been declared brain-dead. Yet the gamer’s motives are a mystery.\\n\" +\n" +
@@ -268,7 +269,7 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "Illuminating both the strength and the gossamer fragility of our deepest emotions, his two New York Times bestsellers, The Notebook and Message in a Bottle, have established him as the leading author of today's most cherished love stories. Now, in A Walk to Remember, he tells a truly unforgettable story, one that glimmers with all of his magic, holding us spellbound-and reminding us that in life each of us may find one great love, the kind that changes everything... ");
         this.bookRepository.save(aWalkToRemember);
 
-        Novel twilight = new Novel("Twilight", DateUtility.toInstant("2005-10-05"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1361039443l/41865.jpg",
+        Novel twilight = new Novel("Twilight", DateUtility.toInstant("2005-10-05"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1361039443l/41865.jpg",
                 3.58f, stephenieMeyer, 498, true, true, "About three things I was absolutely positive.\n" +
                 "\n" +
                 "First, Edward was a vampire.\n" +
