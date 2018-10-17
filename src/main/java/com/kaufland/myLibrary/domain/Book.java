@@ -3,7 +3,6 @@ package com.kaufland.myLibrary.domain;
 import javax.persistence.*;
 import java.time.Instant;
 
-@Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "book_type")
 public abstract class Book extends Read implements Comparable {

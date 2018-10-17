@@ -4,8 +4,6 @@ import javax.persistence.*;
 import java.time.Instant;
 import java.util.Arrays;
 
-@Entity
-@DiscriminatorValue("ChildBook")
 public class ChildBook extends Book implements Colorable {
 
     private String[] pictures;

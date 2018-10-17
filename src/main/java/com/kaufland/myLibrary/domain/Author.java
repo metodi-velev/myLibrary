@@ -3,9 +3,7 @@ package com.kaufland.myLibrary.domain;
 import javax.persistence.*;
 import java.time.Instant;
 import java.util.Collection;
-import java.util.List;
 
-@Entity
 public class Author {
 
     private String firstName;

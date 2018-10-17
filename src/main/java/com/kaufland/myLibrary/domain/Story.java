@@ -3,13 +3,11 @@ package com.kaufland.myLibrary.domain;
 import javax.persistence.*;
 import java.time.Instant;
 
-@Entity
 public class Story extends Read {
 
     @Transient
     private User user;
 
-    @Column(columnDefinition = "text")
     private String summary;
 
     private String text;

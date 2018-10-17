@@ -1,18 +1,13 @@
 package com.kaufland.myLibrary.domain;
 
 import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
 import java.time.Instant;
 
 
-@Entity
-@DiscriminatorValue("Novel")
 public class Novel extends Book implements BlackAndWhite {
 
     private boolean isBlackAndWhite;
 
-    @Column(columnDefinition = "text")
     private String summary;
     private boolean series;
 

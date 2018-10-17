@@ -138,226 +138,115 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "                \"No one is who they seem. And not everyone will survive the lies…");
         this.bookRepository.save(onyx);
 
-        Novel obsidian = new Novel();
-        obsidian.setTitle("");
-        obsidian.setAuthor(jenniferArmentrout);
-        obsidian.setPages(335);
-        obsidian.setLanguage(Language.ENGLISH);
-        obsidian.setGenre(Genre.FANTASY);
-        obsidian.setYear(DateUtility.toInstant("2012-05-08"));
-        obsidian.setRating(4.22f);
-        obsidian.setImage("http://t0.gstatic.com/images?q=tbn:ANd9GcRnK_veIP5Fr3a1CRS_B5e3Y93knzNq5ekf8I_C1de-1aZn6gtH");
-        obsidian.setSeries(true);
-        obsidian.setSummary("Starting over sucks.\n" +
-                "\n" +
-                "When we moved to West Virginia right before my senior year, I’d pretty much resigned myself to thick accents, dodgy internet access, and a whole lot of boring… until I spotted my hot neighbor, with his looming height and eerie green eyes. Things were looking up.\n" +
-                "\n" +
-                "And then he opened his mouth.\n" +
-                "\n" +
-                "Daemon is infuriating. Arrogant. Stab-worthy. We do not get along. At all. But when a stranger attacks me and Daemon literally freezes time with a wave of his hand, well, something… unexpected happens. \n" +
-                "\n" +
-                "The hot alien living next door marks me.\n" +
-                "\n" +
-                "You heard me. Alien. Turns out Daemon and his sister have a galaxy of enemies wanting to steal their abilities, and Daemon’s touch has me lit up like the Vegas Strip. The only way I’m getting out of this alive is by sticking close to Daemon until my alien mojo fades. \n" +
-                "\n" +
-                "If I don’t kill him first, that is.");
-        obsidian.setBlackAndWhite(true);
+        Novel obsidian = new Novel("Obsidian", DateUtility.toInstant("2012-05-08"), Language.ENGLISH, Genre.FANTASY, "http://t0.gstatic.com/images?q=tbn:ANd9GcRnK_veIP5Fr3a1CRS_B5e3Y93knzNq5ekf8I_C1de-1aZn6gtH",
+                4.22f, jenniferArmentrout, 335, true, true, "Starting over sucks.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"When we moved to West Virginia right before my senior year, I’d pretty much resigned myself to thick accents, dodgy internet access, and a whole lot of boring… until I spotted my hot neighbor, with his looming height and eerie green eyes. Things were looking up.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"And then he opened his mouth.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Daemon is infuriating. Arrogant. Stab-worthy. We do not get along. At all. But when a stranger attacks me and Daemon literally freezes time with a wave of his hand, well, something… unexpected happens. \\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"The hot alien living next door marks me.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"You heard me. Alien. Turns out Daemon and his sister have a galaxy of enemies wanting to steal their abilities, and Daemon’s touch has me lit up like the Vegas Strip. The only way I’m getting out of this alive is by sticking close to Daemon until my alien mojo fades. \\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"If I don’t kill him first, that is.");
         this.bookRepository.save(obsidian);
 
-        Novel theHungerGames = new Novel();
-        theHungerGames.setTitle("The Hunger Games");
-        theHungerGames.setAuthor(suzanneCollins);
-        theHungerGames.setPages(374);
-        theHungerGames.setLanguage(Language.ENGLISH);
-        theHungerGames.setGenre(Genre.YOUNG_ADULT);
-        theHungerGames.setYear(DateUtility.toInstant("2008-09-14"));
-        theHungerGames.setRating(4.33f);
-        theHungerGames.setImage("https://images.gr-assets.com/books/1447303603l/2767052.jpg");
-        theHungerGames.setSeries(true);
-        theHungerGames.setSummary("Winning will make you famous. \n" +
-                "Losing means certain death.\n" +
-                "\n" +
-                "The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.\n" +
-                "\n" +
-                "When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.");
-        theHungerGames.setBlackAndWhite(true);
+        Novel theHungerGames = new Novel("The Hunger Games", DateUtility.toInstant("2008-09-14"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1447303603l/2767052.jpg",
+               4.33f, suzanneCollins, 374, true, true, "Winning will make you famous. \\n\" +\n" +
+                "                \"Losing means certain death.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"The nation of Panem, formed from a post-apocalyptic North America, is a country that consists of a wealthy Capitol region surrounded by 12 poorer districts. Early in its history, a rebellion led by a 13th district against the Capitol resulted in its destruction and the creation of an annual televised event known as the Hunger Games. In punishment, and as a reminder of the power and grace of the Capitol, each district must yield one boy and one girl between the ages of 12 and 18 through a lottery system to participate in the games. The 'tributes' are chosen during the annual Reaping and are forced to fight to the death, leaving only one survivor to claim victory.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"When 16-year-old Katniss's young sister, Prim, is selected as District 12's female representative, Katniss volunteers to take her place. She and her male counterpart Peeta, are pitted against bigger, stronger representatives, some of whom have trained for this their whole lives. , she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.");
         this.bookRepository.save(theHungerGames);
 
-        Novel catchingFire = new Novel();
-        catchingFire.setTitle("Catching Fire");
-        catchingFire.setAuthor(suzanneCollins);
-        catchingFire.setPages(391);
-        catchingFire.setLanguage(Language.ENGLISH);
-        catchingFire.setGenre(Genre.SCIENCE_FICTION);
-        catchingFire.setYear(DateUtility.toInstant("2009-09-01"));
-        catchingFire.setRating(4.29f);
-        catchingFire.setImage("https://images.gr-assets.com/books/1358273780l/6148028.jpg");
-        catchingFire.setSeries(true);
-        catchingFire.setSummary("Sparks are igniting.\n" +
-                "Flames are spreading.\n" +
-                "And the Capitol wants revenge.\n" +
-                "\n" +
-                "Against all odds, Katniss has won the Hunger Games. She and fellow District 12 tribute Peeta Mellark are miraculously still alive. Katniss should be relieved, happy even. After all, she has returned to her family and her longtime friend, Gale. Yet nothing is the way Katniss wishes it to be. Gale holds her at an icy distance. Peeta has turned his back on her completely. And there are whispers of a rebellion against the Capitol - a rebellion that Katniss and Peeta may have helped create.\n" +
-                "\n" +
-                "Much to her shock, Katniss has fueled an unrest she's afraid she cannot stop. And what scares her even more is that she's not entirely convinced she should try. As time draws near for Katniss and Peeta to visit the districts on the Capitol's cruel Victory Tour, the stakes are higher than ever. If they can't prove, without a shadow of a doubt, that they are lost in their love for each other, the consequences will be horrifying.\n" +
-                "\n" +
-                "In Catching Fire, the second novel in the Hunger Games trilogy, Suzanne Collins continues the story of Katniss Everdeen, testing her more than ever before...and surprising readers at every turn.");
-        catchingFire.setBlackAndWhite(true);
+        Novel catchingFire = new Novel("Catching Fire", DateUtility.toInstant("2009-09-01"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1358273780l/6148028.jpg",
+                4.29f, suzanneCollins, 391, true, true, "Sparks are igniting.\\n\" +\n" +
+                "                \"Flames are spreading.\\n\" +\n" +
+                "                \"And the Capitol wants revenge.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Against all odds, Katniss has won the Hunger Games. She and fellow District 12 tribute Peeta Mellark are miraculously still alive. Katniss should be relieved, happy even. After all, she has returned to her family and her longtime friend, Gale. Yet nothing is the way Katniss wishes it to be. Gale holds her at an icy distance. Peeta has turned his back on her completely. And there are whispers of a rebellion against the Capitol - a rebellion that Katniss and Peeta may have helped create.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Much to her shock, Katniss has fueled an unrest she's afraid she cannot stop. And what scares her even more is that she's not entirely convinced she should try. As time draws near for Katniss and Peeta to visit the districts on the Capitol's cruel Victory Tour, the stakes are higher than ever. If they can't prove, without a shadow of a doubt, that they are lost in their love for each other, the consequences will be horrifying.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"In Catching Fire, the second novel in the Hunger Games trilogy, Suzanne Collins continues the story of Katniss Everdeen, testing her more than ever before...and surprising readers at every turn.");
         this.bookRepository.save(catchingFire);
 
-        Novel mockingjay = new Novel();
-        mockingjay.setTitle("Mockingjay");
-        mockingjay.setAuthor(suzanneCollins);
-        mockingjay.setPages(392);
-        mockingjay.setLanguage(Language.ENGLISH);
-        mockingjay.setGenre(Genre.SCIENCE_FICTION);
-        mockingjay.setYear(DateUtility.toInstant("2010-08-24"));
-        mockingjay.setRating(4.03f);
-        mockingjay.setImage("https://images.gr-assets.com/books/1358275419l/7260188.jpg");
-        mockingjay.setSeries(true);
-        mockingjay.setSummary("My name is Katniss Everdeen.\n" +
-                "Why am I not dead?\n" +
-                "I should be dead.\n" +
-                "\n" +
-                "Katniss Everdeen, girl on fire, has survived, even though her home has been destroyed. Gale has escaped. Katniss's family is safe. Peeta has been captured by the Capitol. District 13 really does exist. There are rebels. There are new leaders. A revolution is unfolding.\n" +
-                "\n" +
-                "It is by design that Katniss was rescued from the arena in the cruel and haunting Quarter Quell, and it is by design that she has long been part of the revolution without knowing it. District 13 has come out of the shadows and is plotting to overthrow the Capitol. Everyone, it seems, has had a hand in the carefully laid plans--except Katniss.\n" +
-                "\n" +
-                "The success of the rebellion hinges on Katniss's willingness to be a pawn, to accept responsibility for countless lives, and to change the course of the future of Panem. To do this, she must put aside her feelings of anger and distrust. She must become the rebels' Mockingjay--no matter what the personal cost.");
-        mockingjay.setBlackAndWhite(true);
+        Novel mockingjay = new Novel("Mockingjay", DateUtility.toInstant("2010-08-24"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1358275419l/7260188.jpg",
+                4.03f, suzanneCollins, 392, true, true, "My name is Katniss Everdeen.\\n\" +\n" +
+                "                \"Why am I not dead?\\n\" +\n" +
+                "                \"I should be dead.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Katniss Everdeen, girl on fire, has survived, even though her home has been destroyed. Gale has escaped. Katniss's family is safe. Peeta has been captured by the Capitol. District 13 really does exist. There are rebels. There are new leaders. A revolution is unfolding.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"It is by design that Katniss was rescued from the arena in the cruel and haunting Quarter Quell, and it is by design that she has long been part of the revolution without knowing it. District 13 has come out of the shadows and is plotting to overthrow the Capitol. Everyone, it seems, has had a hand in the carefully laid plans--except Katniss.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"The success of the rebellion hinges on Katniss's willingness to be a pawn, to accept responsibility for countless lives, and to change the course of the future of Panem. To do this, she must put aside her feelings of anger and distrust. She must become the rebels' Mockingjay--no matter what the personal cost.");
         this.bookRepository.save(mockingjay);
 
-        Novel divergent = new Novel();
-        divergent.setTitle("Divergent");
-        divergent.setAuthor(veronicaRoth);
-        divergent.setPages(487);
-        divergent.setLanguage(Language.ENGLISH);
-        divergent.setGenre(Genre.FICTION);
-        divergent.setYear(DateUtility.toInstant("2012-02-28"));
-        divergent.setRating(4.22f);
-        divergent.setImage("https://images.gr-assets.com/books/1328559506l/13335037.jpg");
-        divergent.setSeries(true);
-        divergent.setSummary("In Beatrice Prior's dystopian Chicago world, society is divided into five factions, each dedicated to the cultivation of a particular virtue—Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is—she can't have both. So she makes a choice that surprises everyone, including herself.\n" +
-                "\n" +
-                "During the highly competitive initiation that follows, Beatrice renames herself Tris and struggles alongside her fellow initiates to live out the choice they have made. Together they must undergo extreme physical tests of endurance and intense psychological simulations, some with devastating consequences. As initiation transforms them all, Tris must determine who her friends really are—and where, exactly, a romance with a sometimes fascinating, sometimes exasperating boy fits into the life she's chosen. But Tris also has a secret, one she's kept hidden from everyone because she's been warned it can mean death. And as she discovers unrest and growing conflict that threaten to unravel her seemingly perfect society, she also learns that her secret might help her save those she loves . . . or it might destroy her.");
-        divergent.setBlackAndWhite(true);
+        Novel divergent = new Novel("Divergent", DateUtility.toInstant("2012-02-28"), Language.ENGLISH, Genre.FICTION, "https://images.gr-assets.com/books/1328559506l/13335037.jpg",
+                4.22f, veronicaRoth, 487, true, true, "In Beatrice Prior's dystopian Chicago world, society is divided into five factions, each dedicated to the cultivation of a particular virtue—Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is—she can't have both. So she makes a choice that surprises everyone, including herself.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"During the highly competitive initiation that follows, Beatrice renames herself Tris and struggles alongside her fellow initiates to live out the choice they have made. Together they must undergo extreme physical tests of endurance and intense psychological simulations, some with devastating consequences. As initiation transforms them all, Tris must determine who her friends really are—and where, exactly, a romance with a sometimes fascinating, sometimes exasperating boy fits into the life she's chosen. But Tris also has a secret, one she's kept hidden from everyone because she's been warned it can mean death. And as she discovers unrest and growing conflict that threaten to unravel her seemingly perfect society, she also learns that her secret might help her save those she loves . . . or it might destroy her.");
         this.bookRepository.save(divergent);
 
-        Novel insurgent = new Novel();
-        insurgent.setTitle("Insurgent");
-        insurgent.setAuthor(veronicaRoth);
-        insurgent.setPages(525);
-        insurgent.setLanguage(Language.ENGLISH);
-        insurgent.setGenre(Genre.YOUNG_ADULT);
-        insurgent.setYear(DateUtility.toInstant("2012-05-01"));
-        insurgent.setRating(4.06f);
-        insurgent.setImage("https://images.gr-assets.com/books/1325667729l/11735983.jpg");
-        insurgent.setSeries(true);
-        insurgent.setSummary("One choice can transform you—or it can destroy you. But every choice has consequences, and as unrest surges in the factions all around her, Tris Prior must continue trying to save those she loves—and herself—while grappling with haunting questions of grief and forgiveness, identity and loyalty, politics and love.\n" +
+        Novel insurgent = new Novel("Insurgent", DateUtility.toInstant("2012-05-01"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1325667729l/11735983.jpg",
+                4.06f, veronicaRoth, 525, true, true, "One choice can transform you—or it can destroy you. But every choice has consequences, and as unrest surges in the factions all around her, Tris Prior must continue trying to save those she loves—and herself—while grappling with haunting questions of grief and forgiveness, identity and loyalty, politics and love.\n" +
                 "\n" +
                 "Tris's initiation day should have been marked by celebration and victory with her chosen faction; instead, the day ended with unspeakable horrors. War now looms as conflict between the factions and their ideologies grows. And in times of war, sides must be chosen, secrets will emerge, and choices will become even more irrevocable—and even more powerful. Transformed by her own decisions but also by haunting grief and guilt, radical new discoveries, and shifting relationships, Tris must fully embrace her Divergence, even if she does not know what she may lose by doing so.\n" +
                 "\n" +
-                "New York Times bestselling author Veronica Roth's much-anticipated second book of the dystopian DIVERGENT series is another intoxicating thrill ride of a story, rich with hallmark twists, heartbreaks, romance, and powerful insights about human nature. ");
-        insurgent.setBlackAndWhite(true);
+                "New York Times bestselling author Veronica Roth's much-anticipated second book of the dystopian DIVERGENT series is another intoxicating thrill ride of a story, rich with hallmark twists, heartbreaks, romance, and powerful insights about human nature.");
         this.bookRepository.save(insurgent);
 
-        Novel allegiant = new Novel();
-        allegiant.setTitle("Allegiant");
-        allegiant.setAuthor(veronicaRoth);
-        allegiant.setPages(526);
-        allegiant.setLanguage(Language.ENGLISH);
-        allegiant.setGenre(Genre.SCIENCE_FICTION);
-        allegiant.setYear(DateUtility.toInstant("2013-10-22"));
-        allegiant.setRating(3.63f);
-        allegiant.setImage("https://images.gr-assets.com/books/1395582745l/18710190.jpg");
-        allegiant.setSeries(true);
-        allegiant.setSummary("Grca badge winner\n" +
-                "The faction-based society that Tris Prior once believed in is shattered - fractured by violence and power struggles and scarred by loss and betrayal. So when offered a chance to explore the world past the limits she's known, Tris is ready. Perhaps beyond the fence, she and Tobias will find a simple new life together, free from complicated lies, tangled loyalties, and painful memories.\n" +
+        Novel allegiant = new Novel("Allegiant", DateUtility.toInstant("2013-10-22"), Language.ENGLISH, Genre.SCIENCE_FICTION, "https://images.gr-assets.com/books/1395582745l/18710190.jpg",
+                3.63f, veronicaRoth, 526, true, true, "The faction-based society that Tris Prior once believed in is shattered - fractured by violence and power struggles and scarred by loss and betrayal. So when offered a chance to explore the world past the limits she's known, Tris is ready. Perhaps beyond the fence, she and Tobias will find a simple new life together, free from complicated lies, tangled loyalties, and painful memories.\n" +
                 "\n" +
                 "But Tris's new reality is even more alarming than the one she left behind. Old discoveries are quickly rendered meaningliess. Explosive new truths change the hearts of those she loves. And once again, Tris must battle to comprehend to complexities of human nature - and of herself - while facing impossible choices about courage, allegiance, sacrifice, and love.\n" +
                 "\n" +
                 "Told from a riveting dual perspective, ALLEGIANT, by #1 New York Times best-selling author Veronica Roth, brings the DIVERGENT series to a powerful conclusion while revealing the secrets of the dystopian world that has captivated millions of readers in DIVERGENT and INSURGENT.");
-        allegiant.setBlackAndWhite(true);
         this.bookRepository.save(allegiant);
 
-        Novel aGameOfThrones = new Novel();
-        aGameOfThrones.setTitle("A Game of Thrones");
-        aGameOfThrones.setAuthor(georgeMartin);
-        aGameOfThrones.setPages(848);
-        aGameOfThrones.setLanguage(Language.ENGLISH);
-        aGameOfThrones.setGenre(Genre.FANTASY);
-        aGameOfThrones.setYear(DateUtility.toInstant("1996-08-06"));
-        aGameOfThrones.setRating(4.45f);
-        aGameOfThrones.setImage("https://images.gr-assets.com/books/1436732693l/13496.jpg");
-        aGameOfThrones.setSeries(true);
-        aGameOfThrones.setSummary("Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister and supernatural forces are massing beyond the kingdom’s protective Wall. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the land they were born to. Sweeping from a land of brutal cold to a distant summertime kingdom of epicurean plenty, here is a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens.\n" +
-                "\n" +
-                "Here an enigmatic band of warriors bear swords of no human metal; a tribe of fierce wildlings carry men off into madness; a cruel young dragon prince barters his sister to win back his throne; and a determined woman undertakes the most treacherous of journeys. Amid plots and counterplots, tragedy and betrayal, victory and terror, the fate of the Starks, their allies, and their enemies hangs perilously in the balance, as each endeavors to win that deadliest of conflicts: the game of thrones.");
-        aGameOfThrones.setBlackAndWhite(true);
+        Novel aGameOfThrones = new Novel("A Game of Thrones", DateUtility.toInstant("1996-08-06"),Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1436732693l/13496.jpg",
+                4.45f, georgeMartin, 848, true, true, "Long ago, in a time forgotten, a preternatural event threw the seasons out of balance. In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the north of Winterfell, sinister and supernatural forces are massing beyond the kingdom’s protective Wall. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the land they were born to. Sweeping from a land of brutal cold to a distant summertime kingdom of epicurean plenty, here is a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Here an enigmatic band of warriors bear swords of no human metal; a tribe of fierce wildlings carry men off into madness; a cruel young dragon prince barters his sister to win back his throne; and a determined woman undertakes the most treacherous of journeys. Amid plots and counterplots, tragedy and betrayal, victory and terror, the fate of the Starks, their allies, and their enemies hangs perilously in the balance, as each endeavors to win that deadliest of conflicts: the game of thrones.");
         this.bookRepository.save(aGameOfThrones);
 
-        Novel aFeastForCrows = new Novel();
-        aFeastForCrows.setTitle("A Feast for Crows");
-        aFeastForCrows.setAuthor(georgeMartin);
-        aFeastForCrows.setPages(1061);
-        aFeastForCrows.setLanguage(Language.ENGLISH);
-        aFeastForCrows.setGenre(Genre.FANTASY);
-        aFeastForCrows.setYear(DateUtility.toInstant("2005-10-17"));
-        aFeastForCrows.setRating(4.12f);
-        aFeastForCrows.setImage("https://images.gr-assets.com/books/1429538615l/13497.jpg");
-        aFeastForCrows.setSeries(true);
-        aFeastForCrows.setSummary("With A Feast for Crows, Martin delivers the long-awaited fourth volume of the landmark series that has redefined imaginative fiction and stands as a modern masterpiece in the making.\n" +
-                "\n" +
-                "After centuries of bitter strife, the seven powers dividing the land have beaten one another into an uneasy truce. But it's not long before the survivors, outlaws, renegades, and carrion eaters of the Seven Kingdoms gather. Now, as the human crows assemble over a banquet of ashes, daring new plots and dangerous new alliances are formed while surprising faces—some familiar, others only just appearing—emerge from an ominous twilight of past struggles and chaos to take up the challenges of the terrible times ahead. Nobles and commoners, soldiers and sorcerers, assassins and sages, are coming together to stake their fortunes...and their lives. For at a feast for crows, many are the guests—but only a few are the survivors.");
-        aFeastForCrows.setBlackAndWhite(true);
+        Novel aFeastForCrows = new Novel("A Feast for Crows", DateUtility.toInstant("2005-10-17"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1429538615l/13497.jpg",
+                4.12f, georgeMartin, 1061, true, true, "With A Feast for Crows, Martin delivers the long-awaited fourth volume of the landmark series that has redefined imaginative fiction and stands as a modern masterpiece in the making.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"After centuries of bitter strife, the seven powers dividing the land have beaten one another into an uneasy truce. But it's not long before the survivors, outlaws, renegades, and carrion eaters of the Seven Kingdoms gather. Now, as the human crows assemble over a banquet of ashes, daring new plots and dangerous new alliances are formed while surprising faces—some familiar, others only just appearing—emerge from an ominous twilight of past struggles and chaos to take up the challenges of the terrible times ahead. Nobles and commoners, soldiers and sorcerers, assassins and sages, are coming together to stake their fortunes...and their lives. For at a feast for crows, many are the guests—but only a few are the survivors.");
         this.bookRepository.save(aFeastForCrows);
 
-        Novel theMazeRunner = new Novel();
-        theMazeRunner.setTitle("The Maze Runner");
-        theMazeRunner.setAuthor(jamesDasher);
-        theMazeRunner.setPages(384);
-        theMazeRunner.setLanguage(Language.ENGLISH);
-        theMazeRunner.setGenre(Genre.YOUNG_ADULT);
-        theMazeRunner.setYear(DateUtility.toInstant("2009-10-06"));
-        theMazeRunner.setRating(4.03f);
-        theMazeRunner.setImage("https://images.gr-assets.com/books/1375596592l/6186357.jpg");
-        theMazeRunner.setSeries(true);
-        theMazeRunner.setSummary("If you ain’t scared, you ain’t human.\n" +
-                "\n" +
-                "When Thomas wakes up in the lift, the only thing he can remember is his name. He’s surrounded by strangers—boys whose memories are also gone.\n" +
-                "\n" +
-                "Nice to meet ya, shank. Welcome to the Glade.\n" +
-                "\n" +
-                "Outside the towering stone walls that surround the Glade is a limitless, ever-changing maze. It’s the only way out—and no one’s ever made it through alive.\n" +
-                "\n" +
-                "Everything is going to change.\n" +
-                "\n" +
-                "Then a girl arrives. The first girl ever. And the message she delivers is terrifying.\n" +
-                "\n" +
-                "Remember. Survive. Run.");
-        theMazeRunner.setBlackAndWhite(true);
+        Novel theMazeRunner = new Novel("The Maze Runner", DateUtility.toInstant("2009-10-06"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1375596592l/6186357.jpg",
+                4.03f, jamesDasher, 384, true, true, "If you ain’t scared, you ain’t human.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"When Thomas wakes up in the lift, the only thing he can remember is his name. He’s surrounded by strangers—boys whose memories are also gone.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Nice to meet ya, shank. Welcome to the Glade.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Outside the towering stone walls that surround the Glade is a limitless, ever-changing maze. It’s the only way out—and no one’s ever made it through alive.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Everything is going to change.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Then a girl arrives. The first girl ever. And the message she delivers is terrifying.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"Remember. Survive. Run.");
         this.bookRepository.save(theMazeRunner);
 
-        Novel theEyeOfMinds = new Novel();
-        theEyeOfMinds.setTitle("The Eye of Minds");
-        theEyeOfMinds.setAuthor(jamesDasher);
-        theEyeOfMinds.setPages(384);
-        theEyeOfMinds.setLanguage(Language.ENGLISH);
-        theEyeOfMinds.setGenre(Genre.SCIENCE);
-        theEyeOfMinds.setYear(DateUtility.toInstant("2013-09-27"));
-        theEyeOfMinds.setRating(3.86f);
-        theEyeOfMinds.setImage("https://images.gr-assets.com/books/1358659346l/16279856.jpg");
-        theEyeOfMinds.setSeries(true);
-        theEyeOfMinds.setSummary("Michael is a gamer. And like most gamers, he almost spends more time on the VirtNet than in the actual world. The VirtNet offers total mind and body immersion, and it’s addictive. Thanks to technology, anyone with enough money can experience fantasy worlds, risk their life without the chance of death, or just hang around with Virt-friends. And the more hacking skills you have, the more fun. Why bother following the rules when most of them are dumb, anyway?\n" +
-                "\n" +
-                "But some rules were made for a reason. Some technology is too dangerous to fool with. And recent reports claim that one gamer is going beyond what any gamer has done before: he’s holding players hostage inside the VirtNet. The effects are horrific—the hostages have all been declared brain-dead. Yet the gamer’s motives are a mystery.\n" +
-                "\n" +
-                "The government knows that to catch a hacker, you need a hacker.\n" +
-                "\n" +
-                "And they’ve been watching Michael. They want him on their team.\n" +
-                "\n" +
-                "But the risk is enormous. If he accepts their challenge, Michael will need to go off the VirtNet grid. There are back alleys and corners in the system human eyes have never seen and predators he can’t even fathom—and there’s the possibility that the line between game and reality will be blurred forever.");
-        theEyeOfMinds.setBlackAndWhite(true);
+        Novel theEyeOfMinds = new Novel("The Eye of Minds", DateUtility.toInstant("2013-09-27"), Language.ENGLISH,Genre.SCIENCE, "https://images.gr-assets.com/books/1358659346l/16279856.jpg",
+                3.86f, jamesDasher, 308, true, true, "Michael is a gamer. And like most gamers, he almost spends more time on the VirtNet than in the actual world. The VirtNet offers total mind and body immersion, and it’s addictive. Thanks to technology, anyone with enough money can experience fantasy worlds, risk their life without the chance of death, or just hang around with Virt-friends. And the more hacking skills you have, the more fun. Why bother following the rules when most of them are dumb, anyway?\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"But some rules were made for a reason. Some technology is too dangerous to fool with. And recent reports claim that one gamer is going beyond what any gamer has done before: he’s holding players hostage inside the VirtNet. The effects are horrific—the hostages have all been declared brain-dead. Yet the gamer’s motives are a mystery.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"The government knows that to catch a hacker, you need a hacker.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"And they’ve been watching Michael. They want him on their team.\\n\" +\n" +
+                "                \"\\n\" +\n" +
+                "                \"But the risk is enormous. If he accepts their challenge, Michael will need to go off the VirtNet grid. There are back alleys and corners in the system human eyes have never seen and predators he can’t even fathom—and there’s the possibility that the line between game and reality will be blurred forever.");
         this.bookRepository.save(theEyeOfMinds);
 
         Novel theJournalOfCuriousLetters = new Novel("The Journal of Curious Letters", DateUtility.toInstant("2008-03-03"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1414559824l/2219694.jpg",
