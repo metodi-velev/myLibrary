@@ -70,7 +70,6 @@ public class DatabaseInitializer implements ApplicationRunner {
 
 
 
-
         Novel it = new Novel("It",DateUtility.toInstant("1987-10-01"), Language.ENGLISH, Genre.HORROR, "https://i2.wp.com/bloody-disgusting.com/wp-content/uploads/2017/04/It-Audiobook.jpg?w=402&h=565&ssl=1",
                                 4.5f, stephenKing, 1116, true, false, "Welcome to Derry, Maine. It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city’s children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry’s sewers." );
         this.bookRepository.save(it);

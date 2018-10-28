@@ -35,7 +35,7 @@ public class Author {
     }
 
     public Author(String firstName, String lastName, String alias, Instant year, Nationality nationality, Genre genres, Collection<Book> books) {
-        this(firstName, lastName, alias, year, nationality ,genres);
+        this(firstName, lastName, alias, year, nationality, genres);
         this.books = books;
     }
 
@@ -103,7 +103,9 @@ public class Author {
         return genres;
     }
 
-    public Book getLatestBook(){
+     
+
+    public Book getLatestBook() {
         return this.books
                 .stream()
                 .sorted(Book::compareTo)
@@ -131,4 +133,6 @@ public class Author {
     public boolean equals(Object author) {
         return this.id == ((Author) author).getId();
     }
+
 }
+
