@@ -1,6 +1,6 @@
 package com.kaufland.myLibrary.web;
 
-import com.kaufland.myLibrary.domain.SaveBook;
+import com.kaufland.myLibrary.dto.BookDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,12 +13,12 @@ public class SaveBookController {
 
     @GetMapping("/saveBook")
     public String saveBook(Model model){
-        /*model.addAllAttributes("saveBook" , new SaveBook());*/
-        return "saveBook";
+        model.addAttribute("book", new BookDTO());
+        return "save/bookForm";
     }
 
     @PostMapping("/saveBook")
-    public String saveBookSubmit(@ModelAttribute SaveBook saveBook){
-        return "result";
+    public String saveBookSubmit(@ModelAttribute BookDTO book){
+        return "save/result/result";
     }
 }

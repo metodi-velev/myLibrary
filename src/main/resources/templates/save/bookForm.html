@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Save book</h1>
-    <form action="#" th:action="@{/saveBook}" th:object="${saveBook}" method="post">
+    <form action="#" th:action="@{/saveBook}" th:object="${book}" method="post">
         <p>Title: <input type="text" th:field="*{title}" /></p>
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
