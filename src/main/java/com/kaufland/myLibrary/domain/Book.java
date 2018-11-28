@@ -5,6 +5,7 @@ import java.time.Instant;
 
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "book_type")
+@Entity
 public abstract class Book extends Read implements Comparable {
 
     @ManyToOne

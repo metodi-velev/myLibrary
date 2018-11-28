@@ -3,6 +3,7 @@ package com.kaufland.myLibrary.domain;
 import javax.persistence.*;
 import java.time.Instant;
 
+@Entity
 public class Story extends Read {
 
     @Transient

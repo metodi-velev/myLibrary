@@ -59,7 +59,7 @@ public class DatabaseInitializer implements ApplicationRunner {
         Author jamesDasher = new Author("James", "Dashner", "", DateUtility.toInstant("1972-11-26"), Nationality.AMERICAN, Genre.FANTASY);
         this.authorRepository.save(jamesDasher);
 
-        Author nicholasSparks = new Author("Nicholas","Sparks", "", DateUtility.toInstant(" 1965-12-31"), Nationality.AMERICAN, Genre.ROMANCE);
+        Author nicholasSparks = new Author("Nicholas","Sparks", "", DateUtility.toInstant("1965-12-31"), Nationality.AMERICAN, Genre.ROMANCE);
         this.authorRepository.save(nicholasSparks);
 
         Author stephenieMeyer = new Author("Stephenie", "Meyer", "", DateUtility.toInstant("1973-12-24"), Nationality.AMERICAN, Genre.FANTASY  );

@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.time.Instant;
 import java.util.Arrays;
 
+@Entity
 public class ChildBook extends Book implements Colorable {
 
     private String[] pictures;
