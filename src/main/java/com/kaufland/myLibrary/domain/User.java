@@ -1,17 +1,32 @@
 package com.kaufland.myLibrary.domain;
 
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
 
+@Entity
 public class User {
         private String userName;
         private String firstName;
         private String lastName;
         private String password;
         private String email;
+        @Transient
         private List<Shelf> shelves;
         private Role role;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+   private Long id;
 
     @OneToMany
     private Collection<Story> stories;

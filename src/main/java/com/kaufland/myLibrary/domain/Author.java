@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.time.Instant;
 import java.util.Collection;
 
+@Entity
+@Table(name = "author")
 public class Author {
 
     private String firstName;

@@ -1,13 +1,15 @@
 package com.kaufland.myLibrary.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.time.Instant;
 
-
+@Entity
 public class Novel extends Book implements BlackAndWhite {
 
     private boolean isBlackAndWhite;
 
+    @Column(length = 2000)
     private String summary;
     private boolean series;
 
