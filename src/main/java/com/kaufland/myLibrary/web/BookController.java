@@ -13,13 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BookController {
 
 
-    @GetMapping("/book")
+    @GetMapping("/get")
     public String savе(Model model){
         model.addAttribute("book", new BookDTO());
         return "save/bookForm";
     }
 
-   /* @RequestMapping("/book")*/
+    @RequestMapping("/book")
+
 
     @PostMapping("/save")
     public String savе(@ModelAttribute BookDTO book){

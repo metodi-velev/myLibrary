@@ -3,6 +3,7 @@ package com.kaufland.myLibrary.services;
 import com.kaufland.myLibrary.domain.*;
 import com.kaufland.myLibrary.dto.BookDTO;
 import com.kaufland.myLibrary.dto.BookDetailDTO;
+import com.kaufland.myLibrary.dto.NovelDTO;
 import com.kaufland.myLibrary.repository.BookRepository;
 import com.kaufland.myLibrary.repository.ChildBookRepository;
 import com.kaufland.myLibrary.repository.NovelRepository;
@@ -13,6 +14,7 @@ import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -84,29 +86,20 @@ public class BookServiceImpl implements BookService  {
         return bookDetailDTO;
     }
 
-
-
-
-
     @Override
-    public BookDTO findById(long id){
+    public NovelDTO findNovelById(long id){
         Book book = this.bookRepository.findById(id).orElse(null);
 
-        BookDTO bookDTO = this.modelMapper.map(book, BookDTO.class);
+        NovelDTO novelDTO = this.modelMapper.map(book, NovelDTO.class);
 
-        return bookDTO;
+        return novelDTO;
     }
 
     @Override
-    public void saveBookDTO(String title, String authorFirstName, String authorLastName, String summary, String image){
-        /*Book book = new Novel(title, authorFirstName, authorLastName, summary, image);*/
-
-
+    public void save(NovelDTO novelDTO){
+        Novel novel = this.modelMapper.map(novelDTO, Novel.class);
+        novelRepository.save(novel);
     }
-
-
-
-
 
     public List<ChildBook> allChildBooks() {
         return this.childBookRepository.findAll();
