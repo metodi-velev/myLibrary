@@ -84,6 +84,30 @@ public class BookServiceImpl implements BookService  {
         return bookDetailDTO;
     }
 
+
+
+
+
+    @Override
+    public BookDTO findById(long id){
+        Book book = this.bookRepository.findById(id).orElse(null);
+
+        BookDTO bookDTO = this.modelMapper.map(book, BookDTO.class);
+
+        return bookDTO;
+    }
+
+    @Override
+    public void saveBookDTO(String title, String authorFirstName, String authorLastName, String summary, String image){
+        /*Book book = new Novel(title, authorFirstName, authorLastName, summary, image);*/
+
+
+    }
+
+
+
+
+
     public List<ChildBook> allChildBooks() {
         return this.childBookRepository.findAll();
     }

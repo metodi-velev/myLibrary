@@ -16,6 +16,10 @@ public interface BookService {
     List<BookDTO> findSuggestedBooks();
     List<BookDTO> findLatestBookByGenre();
 
+    BookDTO findById(long id);
+
+    void saveBookDTO(String title, String authorFirstName, String authorLastName, String summary, String image);
+
     BookDetailDTO findBookById(Long id);
     List<ChildBook> allChildBooks();
     List<Novel> allNovels();
