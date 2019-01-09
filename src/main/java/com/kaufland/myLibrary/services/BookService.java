@@ -4,6 +4,7 @@ import com.kaufland.myLibrary.domain.Author;
 import com.kaufland.myLibrary.domain.Book;
 import com.kaufland.myLibrary.domain.ChildBook;
 import com.kaufland.myLibrary.domain.Novel;
+import com.kaufland.myLibrary.dto.BasicBookDTO;
 import com.kaufland.myLibrary.dto.BookDTO;
 import com.kaufland.myLibrary.dto.BookDetailDTO;
 
@@ -24,6 +25,7 @@ public interface BookService {
     Book theLatestBook();
     List<Book> findBookByAlias(String alias);
     List<Book> findBookByPages(int min, int max);
+    void save(BasicBookDTO basicBookDTO);
 
 
 }

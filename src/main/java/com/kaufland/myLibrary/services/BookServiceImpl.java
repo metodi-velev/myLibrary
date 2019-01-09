@@ -1,6 +1,7 @@
 package com.kaufland.myLibrary.services;
 
 import com.kaufland.myLibrary.domain.*;
+import com.kaufland.myLibrary.dto.BasicBookDTO;
 import com.kaufland.myLibrary.dto.BookDTO;
 import com.kaufland.myLibrary.dto.BookDetailDTO;
 import com.kaufland.myLibrary.repository.BookRepository;
@@ -125,4 +126,8 @@ public class BookServiceImpl implements BookService  {
         return this.bookRepository.findBookByPagesBetween(min,max);
     }
 
+    public void save(BasicBookDTO basicBookDTO){
+        Novel novel = modelMapper.map(basicBookDTO, Novel.class);
+        this.novelRepository.save(novel);
+    }
 }
