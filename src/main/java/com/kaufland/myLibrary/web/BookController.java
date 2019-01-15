@@ -1,5 +1,6 @@
 package com.kaufland.myLibrary.web;
 
+import com.kaufland.myLibrary.dto.AuthorDTO;
 import com.kaufland.myLibrary.dto.BasicBookDTO;
 import com.kaufland.myLibrary.services.AuthorServiceImpl;
 import com.kaufland.myLibrary.services.BookService;
@@ -25,7 +26,7 @@ public class BookController {
     @GetMapping("/save")
     public String save(Model model){
         model.addAttribute("book", new BasicBookDTO());
-        model.addAttribute("authors", new AuthorServiceImpl());
+        model.addAttribute("authors", new AuthorDTO());
         return "forms/novel";
     }
 
