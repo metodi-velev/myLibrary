@@ -1,8 +1,7 @@
 package com.kaufland.myLibrary.web;
 
 import com.kaufland.myLibrary.dto.BasicBookDTO;
-import com.kaufland.myLibrary.dto.BookDTO;
-import com.kaufland.myLibrary.services.AuthorService;
+import com.kaufland.myLibrary.services.AuthorServiceImpl;
 import com.kaufland.myLibrary.services.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,15 +14,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("books")
 public class BookController {
     private final BookService bookService;
+    private final AuthorServiceImpl authorService;
 
-    public BookController(BookService bookService) {
+
+    public BookController(BookService bookService, AuthorServiceImpl authorService) {
         this.bookService = bookService;
+        this.authorService = authorService;
     }
 
     @GetMapping("/save")
     public String save(Model model){
         model.addAttribute("book", new BasicBookDTO());
-        model.addAttribute("author", new BasicBookDTO());
+        model.addAttribute("authors", new AuthorServiceImpl());
         return "forms/novel";
     }
 

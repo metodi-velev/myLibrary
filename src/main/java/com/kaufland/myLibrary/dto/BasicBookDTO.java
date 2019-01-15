@@ -4,7 +4,7 @@ import com.kaufland.myLibrary.domain.Author;
 
 public class BasicBookDTO {
     private String title;
-    private Author author;
+    private AuthorDTO authorDTO;
 
 
     public String getTitle() {
@@ -15,11 +15,11 @@ public class BasicBookDTO {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public AuthorDTO getAuthorDTO() {
+        return authorDTO;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthorDTO(AuthorDTO authorDTO) {
+        this.authorDTO = authorDTO;
     }
 }

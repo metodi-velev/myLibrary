@@ -4,6 +4,7 @@ import com.kaufland.myLibrary.domain.Author;
 import com.kaufland.myLibrary.domain.Book;
 import com.kaufland.myLibrary.domain.Genre;
 import com.kaufland.myLibrary.domain.Nationality;
+import com.kaufland.myLibrary.dto.AuthorDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

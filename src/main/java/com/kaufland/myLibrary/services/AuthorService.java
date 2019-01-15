@@ -1,7 +1,7 @@
 package com.kaufland.myLibrary.services;
 
-import org.springframework.stereotype.Service;
+import com.kaufland.myLibrary.dto.AuthorDTO;
 
-@Service
-public class AuthorService {
+public interface AuthorService {
+    AuthorDTO getAll();
 }

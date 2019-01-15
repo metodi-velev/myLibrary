@@ -16,7 +16,7 @@
 
 </head>
 <body>
-<div th:replace="fragments/navbar :: navbar">...</div>
+<div th:replace="fragments/navbar :: navbar"></div>
 
 
 
@@ -27,7 +27,7 @@
                  <section th:each="book : ${suggestedBooks}">
                      <a th:href="'book/' + ${book.id}" class="allAboutBook card row" >
                          <div class="card-img-top col-xl-12 col-lg-12 ">
-                             <img class="img-fluid" th:src="${book.image}" alt="First book">
+                             <img class="img-fluid" th:src="${book.image}">
                          </div>
                          <div class=" card-body col-xl-12 col-lg-12">
                              <h2 class="card-title" th:text="${book.title}"></h2>
