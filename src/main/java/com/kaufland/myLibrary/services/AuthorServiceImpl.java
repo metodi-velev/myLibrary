@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class AuthorServiceImpl implements AuthorService {
@@ -19,9 +20,11 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public AuthorDTO getAllAuthors() {
+    public List<AuthorDTO> getAllAuthors() {
         List<Author> authors = this.authorRepository.findAll();
-        AuthorDTO authorDTO = this.modelMapper.map(authors, AuthorDTO.class);
-        return authorDTO;
+        return authors
+                .stream()
+                .map(author -> this.modelMapper.map(author, AuthorDTO.class))
+                .collect(Collectors.toList());
     }
 }

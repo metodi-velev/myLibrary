@@ -5,5 +5,5 @@ import com.kaufland.myLibrary.dto.AuthorDTO;
 import java.util.List;
 
 public interface AuthorService {
-    AuthorDTO getAllAuthors();
+    List<AuthorDTO> getAllAuthors();
 }

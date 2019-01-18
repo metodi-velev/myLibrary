@@ -26,7 +26,7 @@ public class BookController {
     @GetMapping("/save")
     public String save(Model model){
         model.addAttribute("book", new BasicBookDTO());
-        model.addAttribute("authors", new AuthorDTO());
+        model.addAttribute("authors", authorService.getAllAuthors());
         return "forms/novel";
     }
 
