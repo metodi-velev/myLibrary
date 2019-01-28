@@ -1,7 +1,5 @@
 package com.kaufland.myLibrary.dto;
 
-import com.kaufland.myLibrary.domain.Author;
-
 public class BasicBookDTO {
     private String title;
     private AuthorDTO author;

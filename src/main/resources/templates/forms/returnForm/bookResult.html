@@ -14,8 +14,8 @@
 </head>
 <body>
 <h1>Result</h1>
-<p th:text="'title: ' + ${book.title}" />
-<p th:text="'author: ' + ${author.first_name}"></p>
+<p th:text="'title: ' + ${book.title}">
+<p th:text="'author: ' + ${author.firstName}"> <!-- + ${author.lastName} --> </p>
 <a href="/saveBook">Submit another message</a>
 </body>
 </html>

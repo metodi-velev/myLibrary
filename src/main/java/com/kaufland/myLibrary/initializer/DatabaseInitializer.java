@@ -123,7 +123,7 @@ public class DatabaseInitializer implements ApplicationRunner {
         this.bookRepository.save(paperTowns);
 
         Novel onyx = new Novel("Onyx", DateUtility.toInstant("2012-08-14"), Language.ENGLISH, Genre.FANTASY, "https://images.gr-assets.com/books/1329408511l/13047090.jpg",
-                4.32f, jenniferArmentrout, 366, true, true, "Being connected to Daemon Black sucks…\\n\" +\n" +
+                4.32f, jenniferArmentrout, 366, true, true, "Being connected to Daemon Black sucks…\\n" +
                 "                \"\\n\" +\n" +
                 "                \"Thanks to his alien mojo, Daemon’s determined to prove what he feels for me is more than a product of our bizarro connection. So I’ve sworn him off, even though he’s running more hot than cold these days. But we’ve got bigger problems.\\n\" +\n" +
                 "                \"\\n\" +\n" +
@@ -153,6 +153,8 @@ public class DatabaseInitializer implements ApplicationRunner {
                 "                \"\\n\" +\n" +
                 "                \"If I don’t kill him first, that is.");
         this.bookRepository.save(obsidian);
+
+
 
         Novel theHungerGames = new Novel("The Hunger Games", DateUtility.toInstant("2008-09-14"), Language.ENGLISH, Genre.YOUNG_ADULT, "https://images.gr-assets.com/books/1447303603l/2767052.jpg",
                4.33f, suzanneCollins, 374, true, true, "Winning will make you famous. \\n\" +\n" +
