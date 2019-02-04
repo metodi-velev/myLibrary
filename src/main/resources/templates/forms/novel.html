@@ -16,9 +16,12 @@
     <p>Title: <input type="text" th:field="*{title}" /></p>
     <p>Author:
         <select th:field="*{author}">
-            <option th:each="author : ${authors}" th:value="${author}" th:text="${author.firstName}"></option>
+            <option th:each="author : ${authors}" th:value="${{author}}" th:text="${author.firstName}"></option>
         </select>
     </p>
+    <p>Published: <input type="date"
+                         value= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}"
+                         min="1800-01-01" max= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}" > </p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>

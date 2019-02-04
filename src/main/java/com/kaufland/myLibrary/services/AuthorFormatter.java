@@ -19,11 +19,11 @@ public class AuthorFormatter implements Formatter<AuthorDTO> {
     @Override
     public AuthorDTO parse(String text, Locale locale) throws ParseException {
         Integer id = Integer.valueOf(text);
-        return this.authorService.get(id);
+        return this.authorService.getById(id);
     }
 
     @Override
     public String print(AuthorDTO object, Locale locale) {
-        return (object != null ? object.getId().toString() : "");
+        return (object != null ? String.valueOf(object.getId()) : "");
     }
 }

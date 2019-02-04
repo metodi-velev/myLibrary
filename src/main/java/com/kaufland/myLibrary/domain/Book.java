@@ -2,6 +2,7 @@ package com.kaufland.myLibrary.domain;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.Calendar;
 
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "book_type")
@@ -50,9 +51,10 @@ public abstract class Book extends Read implements Comparable {
     @Override
     public int compareTo(Object other) {
         if (other instanceof Book) {
-            return -this.getYear().compareTo(((Book) other).getYear());
+            return this.getYear().compareTo(((Book) other).getYear());
+        }else{
+            return 0;
         }
-        return 0;
     }
 
     @Override

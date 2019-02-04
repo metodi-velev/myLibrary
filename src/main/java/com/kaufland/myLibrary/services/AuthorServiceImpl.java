@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -26,5 +27,16 @@ public class AuthorServiceImpl implements AuthorService {
                 .stream()
                 .map(author -> this.modelMapper.map(author, AuthorDTO.class))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public AuthorDTO getById(long id){
+        Optional<Author> author = this.authorRepository.findById(id);
+        if(author.isPresent()){
+            author.get();
+            return this.modelMapper.map(author.get(), AuthorDTO.class);
+        } else{
+            return null;
+        }
     }
 }
