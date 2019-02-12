@@ -1,8 +1,8 @@
 package com.kaufland.myLibrary.formatter;
 
+import com.kaufland.myLibrary.util.DateUtility;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.time.Instant;
@@ -14,7 +14,7 @@ public class DateFormatter implements Formatter<Instant> {
 
     @Override
     public Instant parse(String text, Locale locale) throws ParseException {
-        Instant year = Instant.parse(text);
+        Instant year = DateUtility.toInstant(text);
         return year;
     }
 
