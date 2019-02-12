@@ -1,13 +1,15 @@
 package com.kaufland.myLibrary.formatter;
 
 import org.springframework.format.Formatter;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.time.Instant;
 import java.util.Locale;
 
-@Service
+@Component
+
 public class DateFormatter implements Formatter<Instant> {
 
     @Override
