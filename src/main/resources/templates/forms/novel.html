@@ -21,7 +21,7 @@
     </p>
     <p>Published: <input type="date"
                          value= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}"
-                         min="1800-01-01" max= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}" > </p>
+                         min="1800-01-01" max= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}" th:field="*(year)" ></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>

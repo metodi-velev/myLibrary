@@ -1,6 +1,5 @@
-package com.kaufland.myLibrary.services;
+package com.kaufland.myLibrary.formatter;
 
-import com.kaufland.myLibrary.domain.Author;
 import com.kaufland.myLibrary.dto.AuthorDTO;
 import com.kaufland.myLibrary.services.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;

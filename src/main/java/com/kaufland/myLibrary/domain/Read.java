@@ -96,11 +96,11 @@ public abstract class Read implements Printable {
 
     @Override
     public String toString() {
-        return "  title='" + title + '\'' +
-                ", year=" + year +
-                ", genre='" + genre + '\'' +
-                ", language='" + language + '\'' +
-                ", rating='" + rating + '\'';
+        return "  title='" + this.title + '\'' +
+                ", year=" + this.year +
+                ", genre='" + this.genre + '\'' +
+                ", language='" + this.language + '\'' +
+                ", rating='" + this.rating + '\'';
 
     }
 
