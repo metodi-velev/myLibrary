@@ -13,16 +13,21 @@
 <body>
 <h1>Save book</h1>
 <form th:object="${book}" method="post">
-    <p>Title: <input type="text" th:field="*{title}" /></p>
+    <p>Title: <input type="text" th:field="*{title}"></p>
     <p>Author:
         <select th:field="*{author}">
+            <option value=""></option>
             <option th:each="author : ${authors}" th:value="${{author}}" th:text="${author.firstName}"></option>
         </select>
     </p>
     <p>Published: <input type="date"
                          value= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}"
                          min="1800-01-01" max= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}" th:field="*{year}" ></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <p>Pages: <input type="number" min="1" max="99999"  th:field="*{pages}"></p>
+    <p>Rating: <input type="number" step="0.01" min="1" max="5" th:field="*{rating}"></p>
+  <!-- <p>Image: <input type="image" th:field="*{image}"></p> + size -->
+    <p><input type="submit" value="Submit"> <input type="reset" value="Reset" /></p>
+
 </form>
 </body>
 </html>
