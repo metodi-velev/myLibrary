@@ -23,9 +23,19 @@
     <p>Published: <input type="date"
                          value= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}"
                          min="1800-01-01" max= "${#calendars.format(#calendars.createNow(),'dd MMM yyyy')}" th:field="*{year}" ></p>
-    <p>Pages: <input type="number" min="1" max="99999"  th:field="*{pages}"  value=“1"> </p>
-    <p>Rating: <input type="number" step="0.01" min="1" max="5" th:field="*{rating}"  value=“1"></p>
+    <p>Pages: <input type="number" min="1" max="99999"  th:field="*{pages}"  value="1"> </p>
+    <p>Rating: <input type="number" step="0.1" min="1" max="5" th:field="*{rating}"  value="1"></p>
     <p>Image: <input type="text" th:field="*{image}"></p>
+    <p>Genre:
+        <select th:field="*{genre}">
+            <option th:each ="genre : ${genres}" th:value="${{genre}}" th:text="${genre}"></option>
+        </select>
+    </p>
+    <p> Language:
+        <select th:filed="*{language}">
+            <option th:each="language : ${languages}" th:value="${{language}}" th:text="${language}"></option>
+        </select>
+    </p>
     <p><input type="submit" value="Submit"> <input type="reset" value="Reset" /></p>
 
 </form>
